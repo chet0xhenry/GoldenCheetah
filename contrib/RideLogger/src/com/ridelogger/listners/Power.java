@@ -129,7 +129,88 @@ public class Power extends Ant
                         @Override
                         public void onNewRawWheelTorqueData(final long estTimestamp, final EnumSet<EventFlag> eventFlags, final long wheelTorqueUpdateEventCount, final long accumulatedWheelTicks, final BigDecimal accumulatedWheelPeriod, final BigDecimal accumulatedWheelTorque)
                         {
-                            alterCurrentData("NM", reduceNumberToString(accumulatedWheelTorque));
+                            int revDiff = 0;
+                            int wheel_periodDiff = 0;
+                            int torqueDiff = 0;
+                            int eventCountDiff = 0;
+                            lastRpm = rpm;
+                            
+                            if (eventCount < lastCount) {
+                              // it has rolled over
+                              eventCountDiff = 256 + eventCount - lastCount;
+                            } else {
+                              eventCountDiff = eventCount - lastCount;
+                            }
+                        
+                            if (revCount < lastRevCount) {
+                              // it has rolled over
+                              revDiff = 256 + revCount - lastRevCount;
+                            } else {
+                              revDiff = revCount - lastRevCount;
+                            }
+                            lastRevCount = revCount;
+                        
+                            totalRevs = revDiff + totalRevs;
+                        
+                            if (wheel_period < lastPeriod) {
+                              // it has rolled over
+                              wheel_periodDiff = 65536 + wheel_period - lastPeriod;
+                            } else {
+                              wheel_periodDiff = wheel_period - lastPeriod;
+                            }
+                            
+                            if (torque < lastTorque) {
+                              // it has rolled over
+                              torqueDiff = 65536 + torque - lastTorque;
+                            } else {
+                              torqueDiff = torque - lastTorque;
+                            }
+                            lastTorque = torque;
+                            
+                            if(eventCountDiff != 0)
+                              torqueAve = torqueDiff;//(32*eventCountDiff); //Nm
+                            else
+                              torqueAve = torqueDiff;
+                            
+                            if (wheel_periodDiff > 0 && eventCountDiff > 0) {
+                              lastPeriod = wheel_period;
+                              lastCount = eventCount;
+                              wheelZeros = 0;
+                            } else {
+                              if (wheelZeros > 4) {
+                                lastPeriod = wheel_period;
+                                lastCount = eventCount;
+                                lastMph = 0;
+                                lastWatt = 0;
+                                return;
+                              }
+                              wheelZeros++;
+                              return;
+                            }
+                        
+                            double mph = 0;
+                            double watt = 0;
+                            if (wheel_periodDiff > 0) {
+                              //7372.8 = (3600/1000) * 2048
+                              //2108mm = wheel circumference of a 700c X 25mm tire
+                              mph = (double) (((7372.8) * 2.108 * (double) eventCountDiff) / ((double) wheel_periodDiff));
+                              watt = (double) 128 * Math.PI * ((double) torqueDiff / (double) wheel_periodDiff);
+                              if (watt == 0) watt = 0;
+                            }
+                        
+                            if (torqueDiff <= 0 && wheel_periodDiff <= 0) {
+                              mph = 0;
+                              watt = 0;
+                            }
+                        
+                            totalDistance = totalRevs * 0.002095;
+                        
+                            if (mph >= 0) {
+                              lastMph = mph;
+                            }
+                            if (watt >= 0) {
+                              lastWatt = watt;
+                            }
                         }
                     }
                 );
