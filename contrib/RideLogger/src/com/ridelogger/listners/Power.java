@@ -9,12 +9,14 @@ import com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc.ICalculatedPowerRecei
 import com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc.ICalculatedTorqueReceiver;
 import com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc.IInstantaneousCadenceReceiver;
 import com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc.IRawPowerOnlyDataReceiver;
+import com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc.IRawWheelTorqueDataReceiver;
 import com.dsi.ant.plugins.antplus.pcc.defines.DeviceState;
 import com.dsi.ant.plugins.antplus.pcc.defines.EventFlag;
 import com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult;
 import com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc.IPluginAccessResultReceiver;
 import com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch.MultiDeviceSearchResult;
 import com.ridelogger.RideService;
+
 import java.math.BigDecimal;
 import java.util.EnumSet;
 import java.util.HashMap;
@@ -123,98 +125,102 @@ public class Power extends Ant
                         }
                     }
                 );
-
+                */
                 result.subscribeRawWheelTorqueDataEvent(
                     new IRawWheelTorqueDataReceiver() {
+                        private long        totalRevs;
+                        private long        wheelZeros;
+                        private long        lastCount;
+                        private long        wheel_period;
+                        private long        lastPeriod;
+                        private long        lastRevCount;
+                        private long        lastTorque;
+                        private double      kph;
+                        private double      watt;
+
                         @Override
-                        public void onNewRawWheelTorqueData(final long estTimestamp, final EnumSet<EventFlag> eventFlags, final long wheelTorqueUpdateEventCount, final long accumulatedWheelTicks, final BigDecimal accumulatedWheelPeriod, final BigDecimal accumulatedWheelTorque)
+                        public void onNewRawWheelTorqueData(
+                            long estTimestamp, 
+                            EnumSet<EventFlag> eventFlags, 
+                            long wheelTorqueUpdateEventCount, 
+                            long accumulatedWheelTicks, 
+                            BigDecimal accumulatedWheelPeriodBD, 
+                            BigDecimal accumulatedWheelTorqueBD
+                        )
                         {
-                            int revDiff = 0;
-                            int wheel_periodDiff = 0;
-                            int torqueDiff = 0;
-                            int eventCountDiff = 0;
-                            lastRpm = rpm;
+                            long revDiff                = 0;
+                            long wheel_periodDiff       = 0;
+                            long torqueDiff             = 0;
+                            long eventCountDiff         = 0;
+                            long accumulatedWheelPeriod = accumulatedWheelPeriodBD.longValue();
+                            long accumulatedWheelTorque = accumulatedWheelTorqueBD.longValue();
                             
-                            if (eventCount < lastCount) {
-                              // it has rolled over
-                              eventCountDiff = 256 + eventCount - lastCount;
+                            if (wheelTorqueUpdateEventCount < lastCount) { // it has rolled over
+                                eventCountDiff = 256 + wheelTorqueUpdateEventCount - lastCount;
                             } else {
-                              eventCountDiff = eventCount - lastCount;
+                                eventCountDiff = wheelTorqueUpdateEventCount - lastCount;
                             }
                         
-                            if (revCount < lastRevCount) {
-                              // it has rolled over
-                              revDiff = 256 + revCount - lastRevCount;
+                            if (accumulatedWheelTicks < lastRevCount) { // it has rolled over
+                                revDiff = 256 + accumulatedWheelTicks - lastRevCount;
                             } else {
-                              revDiff = revCount - lastRevCount;
+                                revDiff = accumulatedWheelTicks - lastRevCount;
                             }
-                            lastRevCount = revCount;
+                            lastRevCount = accumulatedWheelTicks;
+                            totalRevs    = revDiff + totalRevs;
                         
-                            totalRevs = revDiff + totalRevs;
-                        
-                            if (wheel_period < lastPeriod) {
-                              // it has rolled over
-                              wheel_periodDiff = 65536 + wheel_period - lastPeriod;
+                            if (accumulatedWheelPeriod < lastPeriod) { // it has rolled over
+                                wheel_periodDiff = 65536 + accumulatedWheelPeriod - lastPeriod;
                             } else {
-                              wheel_periodDiff = wheel_period - lastPeriod;
+                                wheel_periodDiff = accumulatedWheelPeriod - lastPeriod;
                             }
                             
-                            if (torque < lastTorque) {
-                              // it has rolled over
-                              torqueDiff = 65536 + torque - lastTorque;
+                            if (accumulatedWheelTorque < lastTorque) { // it has rolled over
+                              torqueDiff = 65536 + accumulatedWheelTorque - lastTorque;
                             } else {
-                              torqueDiff = torque - lastTorque;
+                              torqueDiff = accumulatedWheelTorque - lastTorque;
                             }
-                            lastTorque = torque;
-                            
-                            if(eventCountDiff != 0)
-                              torqueAve = torqueDiff;//(32*eventCountDiff); //Nm
-                            else
-                              torqueAve = torqueDiff;
+                            lastTorque = accumulatedWheelTorque;
                             
                             if (wheel_periodDiff > 0 && eventCountDiff > 0) {
-                              lastPeriod = wheel_period;
-                              lastCount = eventCount;
-                              wheelZeros = 0;
-                            } else {
-                              if (wheelZeros > 4) {
                                 lastPeriod = wheel_period;
-                                lastCount = eventCount;
-                                lastMph = 0;
-                                lastWatt = 0;
+                                lastCount  = wheelTorqueUpdateEventCount;
+                                wheelZeros = 0;
+                            } else {
+                                if (wheelZeros > 4) {
+                                    lastPeriod = wheel_period;
+                                    lastCount  = wheelTorqueUpdateEventCount;
+                                    return;
+                                }
+                                wheelZeros++;
                                 return;
-                              }
-                              wheelZeros++;
-                              return;
-                            }
-                        
-                            double mph = 0;
-                            double watt = 0;
-                            if (wheel_periodDiff > 0) {
-                              //7372.8 = (3600/1000) * 2048
-                              //2108mm = wheel circumference of a 700c X 25mm tire
-                              mph = (double) (((7372.8) * 2.108 * (double) eventCountDiff) / ((double) wheel_periodDiff));
-                              watt = (double) 128 * Math.PI * ((double) torqueDiff / (double) wheel_periodDiff);
-                              if (watt == 0) watt = 0;
                             }
                         
                             if (torqueDiff <= 0 && wheel_periodDiff <= 0) {
-                              mph = 0;
-                              watt = 0;
+                                kph  = 0;
+                                watt = 0;
+                            } else if (wheel_periodDiff > 0) {
+                                // kph        = 3600* 1000 * wcm * ecd / (1/2048)
+                                // 7372800000 = (3600*1000) / 1/2048s 
+                                // 2108mm     = wheel circumference of a 700c X 25mm tire
+                                
+                                kph  = (double) (((7372800000.0) * wheelCircumferenceInMeters.doubleValue() * (double) eventCountDiff) / ((double) wheel_periodDiff));
+                                watt = (double) 128 * Math.PI * ((double) torqueDiff / (double) wheel_periodDiff);
                             }
                         
-                            totalDistance = totalRevs * 0.002095;
-                        
-                            if (mph >= 0) {
-                              lastMph = mph;
-                            }
-                            if (watt >= 0) {
-                              lastWatt = watt;
-                            }
+                            
+                            
+                            Map<String, String> map = new HashMap<String, String>();
+                            map.put("KM",    reduceNumberToString(totalRevs * wheelCircumferenceInMeters.doubleValue() * 1000.0));
+                            map.put("KPH",   reduceNumberToString(kph));
+                            map.put("WATTS", reduceNumberToString(watt));
+                            map.put("NM",    reduceNumberToString(torqueDiff));
+                            alterCurrentData(map);
                         }
                     }
                 );
-
+                
+                /*
                 result.subscribeRawCrankTorqueDataEvent(
                     new IRawCrankTorqueDataReceiver() {
                         @Override
