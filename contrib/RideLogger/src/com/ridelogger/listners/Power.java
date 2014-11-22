@@ -48,7 +48,7 @@ public class Power extends Ant
     protected IPluginAccessResultReceiver<AntPlusBikePowerPcc> mResultReceiver = new IPluginAccessResultReceiver<AntPlusBikePowerPcc>() {
         //Handle the result, connecting to events on success or reporting failure to user.
         @Override
-        public void onResultReceived(AntPlusBikePowerPcc result, RequestAccessResult resultCode, DeviceState initialDeviceState) {
+        public void onResultReceived(final AntPlusBikePowerPcc result, RequestAccessResult resultCode, DeviceState initialDeviceState) {
             if(resultCode == com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult.SUCCESS) {
                 result.subscribeCalculatedPowerEvent(new ICalculatedPowerReceiver() {
                         @Override
