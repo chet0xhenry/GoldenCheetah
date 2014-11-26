@@ -47,16 +47,20 @@ class NP : public RideMetric {
 
         if(ride->recIntSecs() == 0) return;
 
-        int rollingwindowsize = 30 / ride->recIntSecs();
+        int rollingwindowsize = 30 / ride->recIntSecsAvgByType('WATTS');  // the average recIntSec by type of data
 
         double total = 0;
         int count = 0;
+
+        double secsWindowStart = 0.0                // start of window in secs
+        double secsWindowEnd   = rollingwindowsize; // end of rolling window in secs
+        double secsN           = 0.0;               // relative secs starting point
+        double secsTotal       = 0.0                // total secs with power data
 
         // no point doing a rolling average if the
         // sample rate is greater than the rolling average
         // window!!
         if (rollingwindowsize > 1) {
-
             QVector<double> rolling(rollingwindowsize);
             int index = 0;
             double sum = 0;
@@ -64,6 +68,10 @@ class NP : public RideMetric {
             // loop over the data and convert to a rolling
             // average for the given windowsize
             for (int i=0; i<ride->dataPoints().size(); i++) {
+                if(isnan(ride->dataPoints()[i]->watts)) {
+                    i++;
+                    continue;
+                }
 
                 sum += ride->dataPoints()[i]->watts;
                 sum -= rolling[index];
@@ -75,6 +83,9 @@ class NP : public RideMetric {
 
                 // move index on/round
                 index = (index >= rollingwindowsize-1) ? 0 : index+1;
+
+                secsTotal = secsN + ride->dataPoints()[i]->secs;
+                secsN = ride->dataPoints()[i]->secs;
             }
         }
         if (count) {
