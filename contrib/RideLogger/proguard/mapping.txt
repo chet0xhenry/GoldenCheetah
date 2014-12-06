@@ -1,0 +1,1940 @@
+android.support.v4.app.ActivityCompatHoneycomb -> android.support.v4.app.a:
+    android.support.v4.app.ActivityCompatHoneycomb next$fe619d5 -> a
+    android.support.v4.app.ActivityCompatHoneycomb prev$fe619d5 -> b
+    int cmd -> c
+    android.support.v4.app.Fragment fragment -> d
+    int enterAnim -> e
+    int exitAnim -> f
+    int popEnterAnim -> g
+    int popExitAnim -> h
+    java.util.ArrayList removed -> i
+    android.app.Notification add(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap) -> a
+    android.app.Notification add(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap,int,int,boolean) -> a
+    android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+    android.os.Parcelable$Creator instantiate(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> b
+    void buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> a
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    long getFrameTime() -> a
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.app.BackStackRecord -> android.support.v4.app.b:
+    android.support.v4.app.FragmentManagerImpl mManager -> l
+    android.support.v4.app.ActivityCompatHoneycomb mHead$fe619d5 -> a
+    android.support.v4.app.ActivityCompatHoneycomb mTail$fe619d5 -> m
+    int mNumOp -> b
+    int mTransition -> c
+    int mTransitionStyle -> d
+    boolean mAddToBackStack -> e
+    java.lang.String mName -> f
+    boolean mCommitted -> n
+    int mIndex -> g
+    int mBreadCrumbTitleRes -> h
+    java.lang.CharSequence mBreadCrumbTitleText -> i
+    int mBreadCrumbShortTitleRes -> j
+    java.lang.CharSequence mBreadCrumbShortTitleText -> k
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void dump(java.lang.String,java.io.PrintWriter,boolean) -> a
+    void addOp$568ae146(android.support.v4.app.ActivityCompatHoneycomb) -> a
+    android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
+    void doAddOp(int,android.support.v4.app.Fragment,java.lang.String,int) -> a
+    android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
+    void bumpBackStackNesting(int) -> a
+    int commit() -> a
+    int commitInternal(boolean) -> a
+    void run() -> run
+    void popFromBackStack(boolean) -> b
+    java.lang.String getName() -> b
+android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
+    int[] mOps -> a
+    int mTransition -> b
+    int mTransitionStyle -> c
+    java.lang.String mName -> d
+    int mIndex -> e
+    int mBreadCrumbTitleRes -> f
+    java.lang.CharSequence mBreadCrumbTitleText -> g
+    int mBreadCrumbShortTitleRes -> h
+    java.lang.CharSequence mBreadCrumbShortTitleText -> i
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.BackStackState$1 -> android.support.v4.app.c:
+    android.support.v4.app.BackStackState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.BackStackState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
+    java.util.HashMap sClassMap -> L
+    int mState -> a
+    android.view.View mAnimatingAway -> b
+    int mStateAfterAnimating -> c
+    android.os.Bundle mSavedFragmentState -> d
+    android.util.SparseArray mSavedViewState -> e
+    int mIndex -> f
+    java.lang.String mWho -> g
+    android.os.Bundle mArguments -> h
+    android.support.v4.app.Fragment mTarget -> i
+    int mTargetIndex -> j
+    int mTargetRequestCode -> k
+    boolean mAdded -> l
+    boolean mRemoving -> m
+    boolean mResumed -> n
+    boolean mFromLayout -> o
+    boolean mInLayout -> p
+    boolean mRestored -> q
+    int mBackStackNesting -> r
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> s
+    android.support.v4.app.FragmentActivity mActivity -> t
+    android.support.v4.app.FragmentManagerImpl mChildFragmentManager -> u
+    android.support.v4.app.Fragment mParentFragment -> v
+    int mFragmentId -> w
+    int mContainerId -> x
+    java.lang.String mTag -> y
+    boolean mHidden -> z
+    boolean mDetached -> A
+    boolean mRetainInstance -> B
+    boolean mRetaining -> C
+    boolean mMenuVisible -> M
+    boolean mCalled -> D
+    int mNextAnim -> E
+    android.view.ViewGroup mContainer -> F
+    android.view.View mView -> G
+    android.view.View mInnerView -> H
+    boolean mDeferStart -> I
+    boolean mUserVisibleHint -> J
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> K
+    boolean mLoadersStarted -> N
+    boolean mCheckedForLoaderManager -> O
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
+    void restoreViewState(android.os.Bundle) -> a
+    void setIndex(int,android.support.v4.app.Fragment) -> a
+    boolean isInBackStack() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    android.support.v4.app.FragmentActivity getActivity() -> b
+    android.content.res.Resources getResources() -> c
+    boolean isDetached() -> d
+    void onHiddenChanged(boolean) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> b
+    void onInflate(android.app.Activity,android.util.AttributeSet,android.os.Bundle) -> a
+    void onAttach(android.app.Activity) -> a
+    android.view.animation.Animation onCreateAnimation(int,boolean,int) -> a
+    void onCreate(android.os.Bundle) -> c
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    void onActivityCreated(android.os.Bundle) -> d
+    void onViewStateRestored(android.os.Bundle) -> e
+    void onStart() -> e
+    void onResume() -> f
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onPause() -> g
+    void onStop() -> h
+    void onLowMemory() -> onLowMemory
+    void onDestroyView() -> i
+    void onDestroy() -> j
+    void initState() -> k
+    void onDetach() -> l
+    void onDestroyOptionsMenu() -> m
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> a
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void instantiateChildFragmentManager() -> n
+    void performCreate(android.os.Bundle) -> f
+    android.view.View performCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> b
+    void performActivityCreated(android.os.Bundle) -> g
+    void performStart() -> o
+    void performResume() -> p
+    void performConfigurationChanged(android.content.res.Configuration) -> a
+    void performLowMemory() -> q
+    boolean performCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean performPrepareOptionsMenu(android.view.Menu) -> a
+    boolean performOptionsItemSelected(android.view.MenuItem) -> b
+    boolean performContextItemSelected(android.view.MenuItem) -> c
+    void performOptionsMenuClosed(android.view.Menu) -> b
+    void performSaveInstanceState(android.os.Bundle) -> h
+    void performPause() -> r
+    void performStop() -> s
+    void performReallyStop() -> t
+    void performDestroyView() -> u
+    void performDestroy() -> v
+android.support.v4.app.Fragment$1 -> android.support.v4.app.d:
+    android.support.v4.app.Fragment this$0 -> a
+    android.view.View findViewById(int) -> a
+android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.e:
+android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
+    android.os.Bundle mState -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.f:
+    android.support.v4.app.Fragment$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.Fragment$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentActivity -> android.support.v4.app.g:
+    android.os.Handler mHandler -> a
+    android.support.v4.app.FragmentManagerImpl mFragments -> b
+    android.support.v4.app.FragmentContainer mContainer -> e
+    boolean mCreated -> f
+    boolean mResumed -> g
+    boolean mStopped -> c
+    boolean mReallyStopped -> h
+    boolean mRetaining -> d
+    boolean mCheckedForLoaderManager -> i
+    boolean mLoadersStarted -> j
+    java.util.HashMap mAllLoaderManagers -> k
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> l
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onBackPressed() -> onBackPressed
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreatePanelMenu(int,android.view.Menu) -> onCreatePanelMenu
+    android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onLowMemory() -> onLowMemory
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void onPanelClosed(int,android.view.Menu) -> onPanelClosed
+    void onPause() -> onPause
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void onResume() -> onResume
+    void onPostResume() -> onPostResume
+    void onResumeFragments() -> a
+    boolean onPreparePanel(int,android.view.View,android.view.Menu) -> onPreparePanel
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onStart() -> onStart
+    void onStop() -> onStop
+    java.lang.Object onRetainCustomNonConfigurationInstance() -> b
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
+    java.lang.String viewToString(android.view.View) -> a
+    void dumpViewHierarchy(java.lang.String,java.io.PrintWriter,android.view.View) -> a
+    void doReallyStop(boolean) -> a
+    void onReallyStop() -> c
+    void onAttachFragment(android.support.v4.app.Fragment) -> a
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void invalidateSupportFragment(java.lang.String) -> a
+    android.support.v4.app.LoaderManagerImpl getLoaderManager(java.lang.String,boolean,boolean) -> a
+android.support.v4.app.FragmentActivity$1 -> android.support.v4.app.h:
+    android.support.v4.app.FragmentActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+android.support.v4.app.FragmentActivity$2 -> android.support.v4.app.i:
+    android.support.v4.app.FragmentActivity this$0 -> a
+    android.view.View findViewById(int) -> a
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.j:
+    int[] Fragment -> a
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.k:
+    java.util.ArrayList fragments -> a
+    java.util.HashMap loaders -> b
+android.support.v4.app.FragmentContainer -> android.support.v4.app.l:
+    android.view.View findViewById(int) -> a
+android.support.v4.app.FragmentManager -> android.support.v4.app.m:
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean executePendingTransactions() -> b
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.n:
+    boolean HONEYCOMB -> d
+    java.util.ArrayList mPendingActions -> e
+    java.lang.Runnable[] mTmpActions -> f
+    boolean mExecutingActions -> g
+    java.util.ArrayList mActive -> a
+    java.util.ArrayList mAdded -> b
+    java.util.ArrayList mAvailIndices -> h
+    java.util.ArrayList mBackStack -> i
+    java.util.ArrayList mCreatedMenus -> j
+    java.util.ArrayList mBackStackIndices -> k
+    java.util.ArrayList mAvailBackStackIndices -> l
+    int mCurState -> c
+    android.support.v4.app.FragmentActivity mActivity -> m
+    android.support.v4.app.FragmentContainer mContainer -> n
+    android.support.v4.app.Fragment mParent -> o
+    boolean mStateSaved -> p
+    boolean mDestroyed -> q
+    boolean mHavePendingDeferredStart -> r
+    android.os.Bundle mStateBundle -> s
+    android.util.SparseArray mStateArray -> t
+    java.lang.Runnable mExecCommit -> u
+    android.view.animation.Interpolator DECELERATE_QUINT -> v
+    android.view.animation.Interpolator DECELERATE_CUBIC -> w
+    void throwException(java.lang.RuntimeException) -> a
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean executePendingTransactions() -> b
+    boolean popBackStackImmediate() -> c
+    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    android.view.animation.Animation makeOpenCloseAnimation(android.content.Context,float,float,float,float) -> a
+    android.view.animation.Animation makeFadeAnimation(android.content.Context,float,float) -> a
+    android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
+    void performPendingDeferredStart(android.support.v4.app.Fragment) -> a
+    void moveToState(android.support.v4.app.Fragment,int,int,int,boolean) -> a
+    void moveToState(android.support.v4.app.Fragment) -> b
+    void moveToState(int,boolean) -> a
+    void moveToState(int,int,int,boolean) -> a
+    void startPendingDeferredFragments() -> d
+    void makeActive(android.support.v4.app.Fragment) -> c
+    void makeInactive(android.support.v4.app.Fragment) -> d
+    void addFragment(android.support.v4.app.Fragment,boolean) -> a
+    void removeFragment(android.support.v4.app.Fragment,int,int) -> a
+    void hideFragment(android.support.v4.app.Fragment,int,int) -> b
+    void showFragment(android.support.v4.app.Fragment,int,int) -> c
+    void detachFragment(android.support.v4.app.Fragment,int,int) -> d
+    void attachFragment(android.support.v4.app.Fragment,int,int) -> e
+    android.support.v4.app.Fragment findFragmentById(int) -> a
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+    void checkStateLoss() -> s
+    void enqueueAction(java.lang.Runnable,boolean) -> a
+    int allocBackStackIndex(android.support.v4.app.BackStackRecord) -> a
+    void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
+    void freeBackStackIndex(int) -> b
+    boolean execPendingActions() -> e
+    void addBackStackState(android.support.v4.app.BackStackRecord) -> b
+    boolean popBackStackState(android.os.Handler,java.lang.String,int,int) -> a
+    java.util.ArrayList retainNonConfig() -> f
+    void saveFragmentViewState(android.support.v4.app.Fragment) -> e
+    android.os.Bundle saveFragmentBasicState(android.support.v4.app.Fragment) -> f
+    android.os.Parcelable saveAllState() -> g
+    void restoreAllState(android.os.Parcelable,java.util.ArrayList) -> a
+    void attachActivity(android.support.v4.app.FragmentActivity,android.support.v4.app.FragmentContainer,android.support.v4.app.Fragment) -> a
+    void noteStateNotSaved() -> h
+    void dispatchCreate() -> i
+    void dispatchActivityCreated() -> j
+    void dispatchStart() -> k
+    void dispatchResume() -> l
+    void dispatchPause() -> m
+    void dispatchStop() -> n
+    void dispatchReallyStop() -> o
+    void dispatchDestroyView() -> p
+    void dispatchDestroy() -> q
+    void dispatchConfigurationChanged(android.content.res.Configuration) -> a
+    void dispatchLowMemory() -> r
+    boolean dispatchCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean dispatchPrepareOptionsMenu(android.view.Menu) -> a
+    boolean dispatchOptionsItemSelected(android.view.MenuItem) -> a
+    boolean dispatchContextItemSelected(android.view.MenuItem) -> b
+    void dispatchOptionsMenuClosed(android.view.Menu) -> b
+    int reverseTransit(int) -> c
+    int transitToStyleIndex(int,boolean) -> b
+android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.o:
+    android.support.v4.app.FragmentManagerImpl this$0 -> a
+    void run() -> run
+android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.p:
+    android.support.v4.app.Fragment val$fragment -> a
+    android.support.v4.app.FragmentManagerImpl this$0 -> b
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentManagerState:
+    android.support.v4.app.FragmentState[] mActive -> a
+    int[] mAdded -> b
+    android.support.v4.app.BackStackState[] mBackStack -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.q:
+    android.support.v4.app.FragmentManagerState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentManagerState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
+    java.lang.String mClassName -> c
+    int mIndex -> d
+    boolean mFromLayout -> e
+    int mFragmentId -> f
+    int mContainerId -> g
+    java.lang.String mTag -> h
+    boolean mRetainInstance -> i
+    boolean mDetached -> j
+    android.os.Bundle mArguments -> k
+    android.os.Bundle mSavedFragmentState -> a
+    android.support.v4.app.Fragment mInstance -> b
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity,android.support.v4.app.Fragment) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentState$1 -> android.support.v4.app.r:
+    android.support.v4.app.FragmentState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTabHost -> android.support.v4.app.FragmentTabHost:
+    java.util.ArrayList mTabs -> a
+    android.widget.TabHost$OnTabChangeListener mOnTabChangeListener -> b
+    android.support.v4.app.FragmentTabHost$TabInfo mLastTab -> c
+    boolean mAttached -> d
+    void setup() -> setup
+    void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener) -> setOnTabChangedListener
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void onTabChanged(java.lang.String) -> onTabChanged
+    android.support.v4.app.FragmentTransaction doTabChanged(java.lang.String,android.support.v4.app.FragmentTransaction) -> a
+android.support.v4.app.FragmentTabHost$SavedState -> android.support.v4.app.FragmentTabHost$SavedState:
+    java.lang.String curTab -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.app.FragmentTabHost$SavedState$1 -> android.support.v4.app.s:
+    android.support.v4.app.FragmentTabHost$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentTabHost$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTabHost$TabInfo -> android.support.v4.app.t:
+    java.lang.String tag -> a
+    java.lang.Class clss -> b
+    android.os.Bundle args -> c
+    android.support.v4.app.Fragment fragment -> d
+    android.support.v4.app.Fragment access$102(android.support.v4.app.FragmentTabHost$TabInfo,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment access$100(android.support.v4.app.FragmentTabHost$TabInfo) -> a
+    java.lang.String access$200(android.support.v4.app.FragmentTabHost$TabInfo) -> b
+    java.lang.Class access$300(android.support.v4.app.FragmentTabHost$TabInfo) -> c
+    android.os.Bundle access$400(android.support.v4.app.FragmentTabHost$TabInfo) -> d
+android.support.v4.app.FragmentTransaction -> android.support.v4.app.u:
+    android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
+    android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
+    int commit() -> a
+android.support.v4.app.LoaderManager -> android.support.v4.app.v:
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.w:
+    android.support.v4.util.SparseArrayCompat mLoaders -> d
+    android.support.v4.util.SparseArrayCompat mInactiveLoaders -> e
+    java.lang.String mWho -> a
+    android.support.v4.app.FragmentActivity mActivity -> f
+    boolean mStarted -> b
+    boolean mRetaining -> c
+    void updateActivity(android.support.v4.app.FragmentActivity) -> a
+    void doStart() -> b
+    void doStop() -> c
+    void doRetain() -> d
+    void finishRetain() -> e
+    void doReportNextStart() -> f
+    void doReportStart() -> g
+    void doDestroy() -> h
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.x:
+    boolean mStarted -> a
+    boolean mRetaining -> c
+    boolean mRetainingStarted -> d
+    boolean mReportNextStart -> b
+    boolean mDestroyed -> e
+    void start() -> a
+    void retain() -> b
+    void finishRetain() -> c
+    void reportStart() -> d
+    void stop() -> e
+    void destroy() -> f
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.y:
+    android.view.ViewGroup wrap(android.view.View) -> a
+    void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
+    void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
+android.support.v4.app.NotificationCompat -> android.support.v4.app.z:
+    android.support.v4.app.NotificationCompat$NotificationCompatImpl IMPL -> a
+    android.support.v4.app.NotificationCompat$NotificationCompatImpl access$000() -> a
+android.support.v4.app.NotificationCompat$Builder -> android.support.v4.app.aa:
+    android.content.Context mContext -> a
+    java.lang.CharSequence mContentTitle -> b
+    java.lang.CharSequence mContentText -> c
+    android.app.PendingIntent mContentIntent -> d
+    int mProgressMax -> e
+    int mProgress -> f
+    boolean mProgressIndeterminate -> g
+    java.util.ArrayList mActions -> h
+    android.app.Notification mNotification -> i
+    android.support.v4.app.NotificationCompat$Builder setSmallIcon(int) -> a
+    android.support.v4.app.NotificationCompat$Builder setContentTitle(java.lang.CharSequence) -> a
+    android.support.v4.app.NotificationCompat$Builder setContentText(java.lang.CharSequence) -> b
+    android.support.v4.app.NotificationCompat$Builder setProgress(int,int,boolean) -> a
+    android.support.v4.app.NotificationCompat$Builder setContentIntent(android.app.PendingIntent) -> a
+    android.app.Notification build() -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImpl -> android.support.v4.app.ab:
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplBase -> android.support.v4.app.ac:
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder) -> a
+    void onDeviceStateChange(com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplHoneycomb -> android.support.v4.app.ad:
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplIceCreamSandwich -> android.support.v4.app.ae:
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplJellybean -> android.support.v4.app.af:
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder) -> a
+android.support.v4.app.NotificationCompatJellybean -> android.support.v4.app.ag:
+    android.app.Notification$Builder b -> a
+    void addAction(int,java.lang.CharSequence,android.app.PendingIntent) -> a
+    android.app.Notification build() -> a
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.ah:
+android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.a.a:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorCallbacks -> android.support.v4.a.b:
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+    java.lang.Object[] newArray(int) -> a
+    android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
+    android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.a.c:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.util.LogWriter -> android.support.v4.b.a:
+    java.lang.String mTag -> a
+    java.lang.StringBuilder mBuilder -> b
+    void close() -> close
+    void flush() -> flush
+    void write(char[],int,int) -> write
+    void flushBuilder() -> a
+android.support.v4.util.SparseArrayCompat -> android.support.v4.b.b:
+    int[] mKeys -> a
+    java.lang.Object[] mValues -> b
+    int size() -> a
+    int keyAt(int) -> a
+    java.lang.Object valueAt(int) -> b
+    void clear() -> b
+    int idealByteArraySize(int) -> c
+    int idealIntArraySize(int) -> d
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.a:
+    android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
+    boolean hasModifiers(android.view.KeyEvent,int) -> a
+    boolean hasNoModifiers(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.b:
+    int metaStateFilterDirectionalModifiers(int,int,int,int,int) -> a
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.c:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.d:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.e:
+    android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
+    int getActionIndex(android.view.MotionEvent) -> a
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.f:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.g:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.h:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.PagerAdapter -> android.support.v4.view.i:
+    int getCount() -> a
+    java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
+    void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> a
+    java.lang.Object instantiateItem(android.view.View,int) -> a
+    void destroyItem(android.view.View,int,java.lang.Object) -> a
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> a
+    android.os.Parcelable saveState() -> b
+    int getItemPosition(java.lang.Object) -> a
+    void registerDataSetObserver(android.database.DataSetObserver) -> a
+    void unregisterDataSetObserver(android.database.DataSetObserver) -> b
+    float getPageWidth(int) -> a
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.j:
+    android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.k:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.l:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.m:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.ViewCompat -> android.support.v4.view.n:
+    android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.o:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.p:
+    long getFrameTime() -> a
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.q:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.r:
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl -> android.support.v4.view.s:
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.t:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    long getFrameTime() -> a
+android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
+    int[] LAYOUT_ATTRS -> a
+    java.util.Comparator COMPARATOR -> b
+    java.util.ArrayList mItems -> c
+    android.support.v4.view.ViewPager$ItemInfo mTempItem -> d
+    android.graphics.Rect mTempRect -> e
+    android.support.v4.view.PagerAdapter mAdapter -> f
+    int mCurItem -> g
+    int mRestoredCurItem -> h
+    android.os.Parcelable mRestoredAdapterState -> i
+    java.lang.ClassLoader mRestoredClassLoader -> j
+    android.support.v4.view.ViewPager$PagerObserver mObserver -> k
+    int mPageMargin -> l
+    android.graphics.drawable.Drawable mMarginDrawable -> m
+    int mTopPageBounds -> n
+    int mBottomPageBounds -> o
+    float mFirstOffset -> p
+    float mLastOffset -> q
+    int mChildHeightMeasureSpec -> r
+    boolean mInLayout -> s
+    boolean mScrollingCacheEnabled -> t
+    boolean mPopulatePending -> u
+    int mOffscreenPageLimit -> v
+    boolean mIsBeingDragged -> w
+    boolean mIsUnableToDrag -> x
+    int mGutterSize -> y
+    float mInitialMotionX -> z
+    float mLastMotionX -> A
+    float mLastMotionY -> B
+    int mActivePointerId -> C
+    android.view.VelocityTracker mVelocityTracker -> D
+    int mSeenPositionMin -> E
+    int mSeenPositionMax -> F
+    boolean mFirstLayout -> G
+    boolean mCalledSuper -> H
+    int mDecorChildCount -> I
+    android.support.v4.app.FragmentContainer mOnPageChangeListener$4b8af522$35a2e21b -> J
+    android.support.v4.app.FragmentContainer mAdapterChangeListener$7b841bf2$35a2e21b -> K
+    java.lang.reflect.Method mSetChildrenDrawingOrderEnabled -> L
+    java.lang.Runnable mEndScrollRunnable -> M
+    int mScrollState -> N
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void setScrollState(int) -> setScrollState
+    void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
+    void removeNonDecorViews() -> f
+    android.support.v4.view.PagerAdapter getAdapter() -> getAdapter
+    void setOnAdapterChangeListener$2b51a269$3b81e580(android.support.v4.app.FragmentContainer) -> setOnAdapterChangeListener$2b51a269$3b81e580
+    void setCurrentItem(int) -> setCurrentItem
+    void setCurrentItem(int,boolean) -> a
+    int getCurrentItem() -> getCurrentItem
+    void setCurrentItemInternal(int,boolean,boolean) -> a
+    void setCurrentItemInternal(int,boolean,boolean,int) -> a
+    void scrollToItem(int,boolean,int,boolean) -> a
+    void setOnPageChangeListener$7c5ced3$3b81e580(android.support.v4.app.FragmentContainer) -> setOnPageChangeListener$7c5ced3$3b81e580
+    void setChildrenDrawingOrderEnabledCompat(boolean) -> setChildrenDrawingOrderEnabledCompat
+    int getChildDrawingOrder(int,int) -> getChildDrawingOrder
+    int getOffscreenPageLimit() -> getOffscreenPageLimit
+    void setOffscreenPageLimit(int) -> setOffscreenPageLimit
+    void setPageMargin(int) -> setPageMargin
+    int getPageMargin() -> getPageMargin
+    void setPageMarginDrawable(android.graphics.drawable.Drawable) -> setPageMarginDrawable
+    void setPageMarginDrawable(int) -> setPageMarginDrawable
+    boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
+    void drawableStateChanged() -> drawableStateChanged
+    float distanceInfluenceForSnapDuration(float) -> a
+    void smoothScrollTo(int,int,int) -> a
+    android.support.v4.view.ViewPager$ItemInfo addNewItem(int,int) -> a
+    void dataSetChanged() -> a
+    void populate() -> b
+    void populate(int) -> a
+    void calculatePageOffsets(android.support.v4.view.ViewPager$ItemInfo,int,android.support.v4.view.ViewPager$ItemInfo) -> a
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
+    android.support.v4.view.ViewPager$ItemInfo infoForChild(android.view.View) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForAnyChild(android.view.View) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForPosition(int) -> b
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void recomputeScrollPosition(int,int,int,int) -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void computeScroll() -> computeScroll
+    boolean pageScrolled(int) -> d
+    void onPageScrolled(int,float,int) -> a
+    void completeScroll(boolean) -> a
+    boolean isGutterDrag(float,float) -> a
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean performDrag(float) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForCurrentScrollPosition() -> g
+    int determineTargetPage(int,float,int,int) -> a
+    void draw(android.graphics.Canvas) -> draw
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onSecondaryPointerUp(android.view.MotionEvent) -> a
+    void endDrag() -> h
+    void setScrollingCacheEnabled(boolean) -> setScrollingCacheEnabled
+    boolean canScroll(android.view.View,boolean,int,int,int) -> a
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+    boolean executeKeyEvent(android.view.KeyEvent) -> a
+    boolean arrowScroll(int) -> c
+    android.graphics.Rect getChildRectInPagerCoordinates(android.graphics.Rect,android.view.View) -> a
+    boolean pageLeft() -> c
+    boolean pageRight() -> d
+    void addFocusables(java.util.ArrayList,int,int) -> addFocusables
+    void addTouchables(java.util.ArrayList) -> addTouchables
+    boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
+    boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    int[] access$400() -> e
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.u:
+    int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.v:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.w:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.x:
+    java.lang.Object object -> a
+    int position -> b
+    boolean scrolling -> c
+    float widthFactor -> d
+    float offset -> e
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.y:
+    boolean isDecor -> a
+    int gravity -> b
+    float widthFactor -> c
+    boolean needsMeasure -> d
+    int position -> e
+    int childIndex -> f
+android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.z:
+    android.support.v4.view.ViewPager this$0 -> a
+    void onChanged() -> onChanged
+    void onInvalidated() -> onInvalidated
+android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPager$SavedState:
+    int position -> a
+    android.os.Parcelable adapterState -> b
+    java.lang.ClassLoader loader -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.view.ViewPager$ViewPositionComparator -> android.support.v4.view.aa:
+    int compare(android.view.View,android.view.View) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.c.a:
+    android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> a
+    void setSize(int,int) -> a
+    boolean isFinished() -> a
+    void finish() -> b
+    boolean onPull(float) -> a
+    boolean onRelease() -> c
+    boolean draw(android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.c.b:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.c.c:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.c.d:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+com.dsi.ant.plugins.antplus.common.FitFileCommon -> com.dsi.ant.plugins.antplus.common.FitFileCommon:
+    java.lang.String TAG -> a
+    java.lang.String access$000() -> a
+com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFile -> com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFile:
+    byte[] mFitFileByteArray -> a
+    short mFitFileType -> b
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFile$1 -> com.dsi.ant.plugins.antplus.common.a:
+    com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFile createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFile[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc -> com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc:
+    java.lang.String TAG -> l
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$IRawPowerOnlyDataReceiver mRawPowerOnlyDataReceiver -> m
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$IInstantaneousCadenceReceiver mInstantaneousCadenceReceiver -> n
+    android.support.v4.app.FragmentContainer mRequestCalibrationMessageReceiver$7a1f38b0$35a2e21b -> o
+    android.support.v4.app.FragmentContainer mRequestAutoZeroStatusReceiver$515ac9a4$35a2e21b -> p
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$ICalculatedPowerReceiver mCalculatedPowerReceiver -> q
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$ICalculatedTorqueReceiver mCalculatedTorqueReceiver -> r
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$ICalculatedCrankCadenceReceiver mCalculatedCrankCadenceReceiver -> s
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalculatedWheelSpeedReceiver mCalculatedWheelSpeedReceiver -> t
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalculatedWheelDistanceReceiver mCalculatedWheelDistanceReceiver -> u
+    android.support.v4.app.FragmentContainer mRequestMeasurementOutputDataReceiver$5f701864$35a2e21b -> v
+    android.support.v4.app.FragmentContainer mRequestCrankParametersReceiver$7abdb54e$35a2e21b -> w
+    android.os.Handler pccHandler -> x
+    java.lang.Runnable unsubscribeRequestCalibrationMessageReceiver -> y
+    java.lang.Runnable unsubscribeRequestAutoZeroStatusReceiver -> z
+    java.lang.Runnable unsubscibeRequestMeasurementOutputDataReceiver -> A
+    java.lang.Runnable unsubscribeRequestCrankParametersReceiver -> B
+    int getRequiredServiceVersionForBind() -> a
+    com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle requestAccess(android.content.Context,int,int,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver) -> a
+    android.content.Intent getServiceBindIntent() -> b
+    void handlePluginEvent(android.os.Message) -> a
+    void subscribeRawPowerOnlyDataEvent(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$IRawPowerOnlyDataReceiver) -> a
+    void subscribeInstantaneousCadenceEvent(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$IInstantaneousCadenceReceiver) -> a
+    void subscribeRequestCalibrationMessageEvent$50e56f2b$3b81e580(android.support.v4.app.FragmentContainer) -> a
+    void subscribeRequestAutoZeroStatusEvent$13d6e0c9$3b81e580(android.support.v4.app.FragmentContainer) -> b
+    void subscribeCalculatedPowerEvent(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$ICalculatedPowerReceiver) -> a
+    void subscribeCalculatedTorqueEvent(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$ICalculatedTorqueReceiver) -> a
+    void subscribeCalculatedCrankCadenceEvent(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$ICalculatedCrankCadenceReceiver) -> a
+    void subscribeCalculatedWheelSpeedEvent(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalculatedWheelSpeedReceiver) -> a
+    void subscribeCalculatedWheelDistanceEvent(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalculatedWheelDistanceReceiver) -> a
+    void subscribeRequestMeasurementOutputDataEvent$7719b927$3b81e580(android.support.v4.app.FragmentContainer) -> c
+    void subscribeRequestCrankParametersEvent$50cfdba7$3b81e580(android.support.v4.app.FragmentContainer) -> d
+    java.lang.String access$000() -> c
+    void access$100$3c8f575c$38c6bc71(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc,android.support.v4.app.FragmentContainer) -> a
+    void access$200$59d73818$38c6bc71(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc,android.support.v4.app.FragmentContainer) -> b
+    void access$300$17a2e8aa$38c6bc71(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc,android.support.v4.app.FragmentContainer) -> c
+    void access$400$352591c8$38c6bc71(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc,android.support.v4.app.FragmentContainer) -> d
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$1 -> com.dsi.ant.plugins.antplus.pcc.a:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc this$0 -> a
+    void run() -> run
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$2 -> com.dsi.ant.plugins.antplus.pcc.b:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc this$0 -> a
+    void run() -> run
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$3 -> com.dsi.ant.plugins.antplus.pcc.c:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc this$0 -> a
+    void run() -> run
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$4 -> com.dsi.ant.plugins.antplus.pcc.d:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc this$0 -> a
+    void run() -> run
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus -> com.dsi.ant.plugins.antplus.pcc.e:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus OFF -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus ON -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus NOT_SUPPORTED -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus INVALID -> d
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus UNKNOWN -> e
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus UNRECOGNIZED -> f
+    int intValue -> g
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus[] $VALUES -> h
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalculatedWheelDistanceReceiver -> com.dsi.ant.plugins.antplus.pcc.f:
+    java.math.BigDecimal wheelCircumference -> a
+    java.math.BigDecimal initialDistanceZeroVal -> b
+    void onNewCalculatedWheelDistance(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> a
+    void onNewRawCalculatedWheelDistance(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> b
+    void access$600(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalculatedWheelDistanceReceiver,long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalculatedWheelSpeedReceiver -> com.dsi.ant.plugins.antplus.pcc.g:
+    java.math.BigDecimal wheelCircumference -> a
+    void onNewCalculatedWheelSpeed(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> a
+    void onNewRawCalculatedWheelSpeed(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> b
+    void access$500(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalculatedWheelSpeedReceiver,long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId -> com.dsi.ant.plugins.antplus.pcc.h:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId GENERAL_CALIBRATION_SUCCESS -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId GENERAL_CALIBRATION_FAIL -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId CTF_MESSAGE -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId CTF_ZERO_OFFSET -> d
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId CTF_SLOPE_ACK -> e
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId CTF_SERIAL_NUMBER_ACK -> f
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId CAPABILITIES -> g
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId CUSTOM_CALIBRATION_RESPONSE -> h
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId CUSTOM_CALIBRATION_UPDATE_SUCCESS -> i
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId INVALID -> j
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId UNRECOGNIZED -> k
+    int intValue -> l
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId[] $VALUES -> m
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationMessage -> com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationMessage:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId calibrationId -> a
+    java.lang.Integer calibrationData -> b
+    java.lang.Integer ctfOffset -> c
+    byte[] manufacturerSpecificData -> d
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationMessage$1 -> com.dsi.ant.plugins.antplus.pcc.i:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationMessage createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationMessage[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus -> com.dsi.ant.plugins.antplus.pcc.j:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus INVALID_CRANK_LENGTH -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus DEFAULT_USED -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus SET_MANUALLY -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus SET_AUTOMATICALLY -> d
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus[] $VALUES -> e
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankParameters -> com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankParameters:
+    java.math.BigDecimal fullCrankLength -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus crankLengthStatus -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus sensorSoftwareMismatchStatus -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus sensorAvailabilityStatus -> d
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus customCalibrationStatus -> e
+    boolean autoCrankLengthSupport -> f
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankParameters$1 -> com.dsi.ant.plugins.antplus.pcc.k:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankParameters createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankParameters[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus -> com.dsi.ant.plugins.antplus.pcc.l:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus UNDEFINED -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus CUSTOM_CALIBRATION_NOT_REQUIRED -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus CUSTOM_CALIBRATION_REQUIRED -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus[] $VALUES -> d
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource -> com.dsi.ant.plugins.antplus.pcc.m:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource POWER_ONLY_DATA -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource WHEEL_TORQUE_DATA -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource CRANK_TORQUE_DATA -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource CTF_DATA -> d
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource COAST_OR_STOP_DETECTED -> e
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource INITIAL_VALUE_POWER_ONLY_DATA -> f
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource INITIAL_VALUE_WHEEL_TORQUE_DATA -> g
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource INITIAL_VALUE_CRANK_TORQUE_DATA -> h
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource INITIAL_VALUE_CTF_DATA -> i
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource INVALID -> j
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource INVALID_CTF_CAL_REQ -> k
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource UNRECOGNIZED -> l
+    int intValue -> m
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource[] $VALUES -> n
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$ICalculatedCrankCadenceReceiver -> com.dsi.ant.plugins.antplus.pcc.n:
+    com.ridelogger.listners.Power$1 this$1 -> a
+    void onNewCalculatedCrankCadence(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$ICalculatedPowerReceiver -> com.dsi.ant.plugins.antplus.pcc.o:
+    com.ridelogger.listners.Power$1 this$1 -> a
+    void onNewCalculatedPower(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$ICalculatedTorqueReceiver -> com.dsi.ant.plugins.antplus.pcc.p:
+    com.ridelogger.listners.Power$1 this$1 -> a
+    void onNewCalculatedTorque(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$IInstantaneousCadenceReceiver -> com.dsi.ant.plugins.antplus.pcc.q:
+    com.ridelogger.listners.Power$1 this$1 -> a
+    void onNewInstantaneousCadence(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$IRawPowerOnlyDataReceiver -> com.dsi.ant.plugins.antplus.pcc.r:
+    com.ridelogger.listners.Power$1 this$1 -> a
+    void onNewRawPowerOnlyData(long,java.util.EnumSet,long,int,long) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus -> com.dsi.ant.plugins.antplus.pcc.s:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus UNDEFINED -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus LEFT_SENSOR_PRESENT -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus RIGHT_SENSOR_PRESENT -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus LEFT_AND_RIGHT_SENSOR_PRESENT -> d
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus[] $VALUES -> e
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus -> com.dsi.ant.plugins.antplus.pcc.t:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus UNDEFINED -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus MISMATCH_RIGHT_SENSOR_OLDER -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus MISMATCH_LEFT_SENSOR_OLDER -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus SW_MATCHES -> d
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus[] $VALUES -> e
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc -> com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc:
+    java.lang.String TAG -> k
+    int getRequiredServiceVersionForBind() -> a
+    android.content.Intent getServiceBindIntent() -> b
+    void handlePluginEvent(android.os.Message) -> a
+    java.lang.String access$000() -> c
+com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$BloodPressureMeasurement -> com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$BloodPressureMeasurement:
+    java.util.GregorianCalendar timestamp_UTC -> a
+    java.lang.Integer systolicPressure -> b
+    java.lang.Integer diastolicPressure -> c
+    java.lang.Integer meanArterialPressure -> d
+    java.lang.Integer map3SampleMean -> e
+    java.lang.Integer mapMorningValues -> f
+    java.lang.Integer mapEveningValues -> g
+    java.lang.Integer heartRate -> h
+    com.garmin.fit.HrType heartRateType -> i
+    com.garmin.fit.BpStatus bloodPressureStatus -> j
+    java.lang.Integer userProfileIndex -> k
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$BloodPressureMeasurement$1 -> com.dsi.ant.plugins.antplus.pcc.u:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$BloodPressureMeasurement createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$BloodPressureMeasurement[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc -> com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc:
+    java.lang.String TAG -> k
+    int getRequiredServiceVersionForBind() -> a
+    android.content.Intent getServiceBindIntent() -> b
+    void handlePluginEvent(android.os.Message) -> a
+    java.lang.String access$000() -> c
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheDeviceData -> com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheDeviceData:
+    int deviceId -> a
+    int hardwareRevision -> b
+    int manufacturerID -> c
+    int modelNumber -> d
+    int softwareRevision -> e
+    long serialNumber -> f
+    long cumulativeOperatingTime -> g
+    java.math.BigDecimal batteryVoltage -> h
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus batteryStatus -> i
+    int cumulativeOperatingTimeResolution -> j
+    com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$ProgrammableGeocacheDeviceData programmableData -> k
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheDeviceData$1 -> com.dsi.ant.plugins.antplus.pcc.v:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheDeviceData createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheDeviceData[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$ProgrammableGeocacheDeviceData -> com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$ProgrammableGeocacheDeviceData:
+    java.lang.String identificationString -> a
+    java.lang.Long PIN -> b
+    java.math.BigDecimal latitude -> c
+    java.math.BigDecimal longitude -> d
+    java.lang.String hintString -> e
+    java.util.GregorianCalendar lastVisitTimestamp -> f
+    java.lang.Integer numberOfVisits -> g
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$ProgrammableGeocacheDeviceData$1 -> com.dsi.ant.plugins.antplus.pcc.w:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$ProgrammableGeocacheDeviceData createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$ProgrammableGeocacheDeviceData[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc -> com.dsi.ant.plugins.antplus.pcc.x:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$IHeartRateDataReceiver mHeartRateDataReceiver -> k
+    com.dsi.ant.plugins.internal.compatibility.LegacyHeartRateCompat mCompat -> l
+    int getRequiredServiceVersionForBind() -> a
+    com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle requestAccess(android.content.Context,int,int,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver) -> a
+    android.content.Intent getServiceBindIntent() -> b
+    void handlePluginEvent(android.os.Message) -> a
+    void subscribeHeartRateDataEvent(com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$IHeartRateDataReceiver) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState -> com.dsi.ant.plugins.antplus.pcc.y:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState LIVE_DATA -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState INITIAL_VALUE -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState ZERO_DETECTED -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState UNRECOGNIZED -> d
+    int intValue -> e
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState[] $VALUES -> f
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$IHeartRateDataReceiver -> com.dsi.ant.plugins.antplus.pcc.z:
+    void onNewHeartRateData(long,java.util.EnumSet,int,long,java.math.BigDecimal,com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc -> com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc:
+    java.lang.String TAG -> k
+    java.util.HashMap mListenForNewActivitiesDeviceToReceiverMap -> l
+    int getRequiredServiceVersionForBind() -> a
+    android.content.Intent getServiceBindIntent() -> b
+    void handlePluginEvent(android.os.Message) -> a
+    java.lang.String access$100() -> c
+com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceInfo -> com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceInfo:
+    java.util.UUID deviceUUID -> a
+    java.lang.String savedDisplayName -> b
+    int antFsManufacturerId -> c
+    int antFsDeviceType -> d
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    boolean equals(java.lang.Object) -> equals
+com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceInfo$1 -> com.dsi.ant.plugins.antplus.pcc.aa:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceInfo createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceInfo[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc -> com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc:
+    java.lang.String TAG -> l
+    int getRequiredServiceVersionForBind() -> a
+    android.content.Intent getServiceBindIntent() -> b
+    void handlePluginEvent(android.os.Message) -> a
+    java.lang.String access$000() -> c
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$1 -> com.dsi.ant.plugins.antplus.pcc.ab:
+    int[] $SwitchMap$com$dsi$ant$plugins$antplus$pcc$AntPlusWeightScalePcc$Gender -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$AdvancedMeasurement -> com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$AdvancedMeasurement:
+    java.math.BigDecimal bodyWeight -> a
+    java.math.BigDecimal hydrationPercentage -> b
+    java.math.BigDecimal bodyFatPercentage -> c
+    java.math.BigDecimal muscleMass -> d
+    java.math.BigDecimal boneMass -> e
+    java.math.BigDecimal activeMetabolicRate -> f
+    java.math.BigDecimal basalMetabolicRate -> g
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$AdvancedMeasurement$1 -> com.dsi.ant.plugins.antplus.pcc.ac:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$AdvancedMeasurement createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$AdvancedMeasurement[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender -> com.dsi.ant.plugins.antplus.pcc.ad:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender FEMALE -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender MALE -> b
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender UNASSIGNED -> c
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender[] $VALUES -> d
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$UserProfile -> com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$UserProfile:
+    int userProfileID -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender gender -> b
+    int age -> c
+    int height -> d
+    int activityLevel -> e
+    boolean lifetimeAthlete -> f
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$UserProfile$1 -> com.dsi.ant.plugins.antplus.pcc.ae:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$UserProfile createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$UserProfile[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.controls.pccbase.AntPlusBaseRemoteControlPcc -> com.dsi.ant.plugins.antplus.pcc.controls.pccbase.AntPlusBaseRemoteControlPcc:
+    java.lang.String TAG -> l
+    java.lang.String access$000() -> c
+com.dsi.ant.plugins.antplus.pcc.controls.pccbase.AntPlusBaseRemoteControlPcc$ControlDeviceCapabilities -> com.dsi.ant.plugins.antplus.pcc.controls.pccbase.AntPlusBaseRemoteControlPcc$ControlDeviceCapabilities:
+    boolean isMaximumNumberRemotesConnected -> a
+    boolean isAudioControlSupported -> b
+    boolean isGenericControlSupported -> c
+    boolean isVideoControlSupported -> d
+    boolean isBurstCommandSupported -> e
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+com.dsi.ant.plugins.antplus.pcc.controls.pccbase.AntPlusBaseRemoteControlPcc$ControlDeviceCapabilities$1 -> com.dsi.ant.plugins.antplus.pcc.controls.pccbase.a:
+    com.dsi.ant.plugins.antplus.pcc.controls.pccbase.AntPlusBaseRemoteControlPcc$ControlDeviceCapabilities createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pcc.controls.pccbase.AntPlusBaseRemoteControlPcc$ControlDeviceCapabilities[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus -> com.dsi.ant.plugins.antplus.pcc.a.a:
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus NEW -> b
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus GOOD -> c
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus OK -> d
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus LOW -> e
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus CRITICAL -> f
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus INVALID -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus UNRECOGNIZED -> g
+    int intValue -> h
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus[] $VALUES -> i
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.defines.DeviceState -> com.dsi.ant.plugins.antplus.pcc.a.b:
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState DEAD -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState CLOSED -> b
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState SEARCHING -> c
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState TRACKING -> d
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState PROCESSING_REQUEST -> e
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState UNRECOGNIZED -> f
+    int intValue -> g
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState[] $VALUES -> h
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceState getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pcc.defines.DeviceType -> com.dsi.ant.plugins.antplus.pcc.a.c:
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType BIKE_POWER -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType CONTROLLABLE_DEVICE -> b
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType FITNESS_EQUIPMENT -> c
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType BLOOD_PRESSURE -> d
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType GEOCACHE -> e
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType ENVIRONMENT -> f
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType WEIGHT_SCALE -> g
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType HEARTRATE -> h
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType BIKE_SPDCAD -> i
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType BIKE_CADENCE -> j
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType BIKE_SPD -> k
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType STRIDE_SDM -> l
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType UNKNOWN -> m
+    int intValue -> n
+    java.lang.String name -> o
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType[] $VALUES -> p
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType getValueFromInt(int) -> a
+    java.lang.String toString() -> toString
+com.dsi.ant.plugins.antplus.pcc.defines.EventFlag -> com.dsi.ant.plugins.antplus.pcc.a.d:
+    com.dsi.ant.plugins.antplus.pcc.defines.EventFlag UNRECOGNIZED_FLAG_PRESENT -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.EventFlag WAS_BUFFERED -> b
+    long longValue -> c
+    com.dsi.ant.plugins.antplus.pcc.defines.EventFlag[] $VALUES -> d
+    com.dsi.ant.plugins.antplus.pcc.defines.EventFlag[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.defines.EventFlag valueOf(java.lang.String) -> valueOf
+    long getLongValue() -> a
+    java.util.EnumSet getEventFlagsFromLong(long) -> a
+com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult -> com.dsi.ant.plugins.antplus.pcc.a.e:
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult SUCCESS -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult USER_CANCELLED -> b
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult CHANNEL_NOT_AVAILABLE -> g
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult OTHER_FAILURE -> c
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult DEPENDENCY_NOT_INSTALLED -> d
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult DEVICE_ALREADY_IN_USE -> h
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult SEARCH_TIMEOUT -> e
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult ALREADY_SUBSCRIBED -> i
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult BAD_PARAMS -> j
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult ADAPTER_NOT_DETECTED -> k
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult UNRECOGNIZED -> f
+    int intValue -> l
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult[] $VALUES -> m
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult[] values() -> values
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult valueOf(java.lang.String) -> valueOf
+    int getIntValue() -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult getValueFromInt(int) -> a
+com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc -> com.dsi.ant.plugins.antplus.pccbase.a:
+    java.lang.String TAG -> k
+    java.lang.String lastMissingDependencyPkgName -> a
+    java.lang.String lastMissingDependencyName -> b
+    android.content.ServiceConnection serviceBindConn -> l
+    android.os.HandlerThread mPluginMsgHandlerThread -> m
+    android.os.Handler$Callback mPluginMsgHandler -> n
+    android.os.HandlerThread mPluginEventHandlerThread -> o
+    android.os.Handler mPluginEventHandler -> p
+    android.os.Handler$Callback mPluginEventHandlerCb -> q
+    java.util.UUID mAccessToken -> r
+    android.os.Messenger mPluginMsgr -> s
+    java.util.concurrent.locks.ReentrantLock mPluginCommLock -> t
+    java.util.concurrent.Exchanger mPluginCommMsgExch -> c
+    java.util.concurrent.CyclicBarrier mPluginCommProcessingBarrier -> d
+    boolean isInitialized -> e
+    java.util.concurrent.CountDownLatch deviceInitializedLatch -> f
+    android.content.Context mOwnerContext -> u
+    com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo deviceInfo -> v
+    java.lang.Integer mCachedState -> g
+    java.lang.Thread mCurrentCmdThread -> w
+    int reportedServiceVersion -> h
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver mStateChangeReceiver -> i
+    com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle mReleaseHandle -> j
+    boolean isReleased -> x
+    boolean mIsPluginServiceBound -> y
+    java.lang.Object mPluginServiceBindChange_LOCK -> z
+    android.content.Intent getServiceBindIntent() -> b
+    int getRequiredServiceVersionForBind() -> a
+    void handlePluginEvent(android.os.Message) -> a
+    com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle requestAccess_Helper_AsyncSearchByDevNumber(android.content.Context,int,int,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver) -> a
+    com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle requestAccess_Helper_Main(android.content.Context,android.os.Bundle,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$RequestAccessResultHandler,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver) -> a
+    void requestAccess_Helper_SubMain(android.content.Context,android.os.Bundle,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,android.os.Handler) -> a
+    void bindAndRequest(android.content.Context,android.os.Bundle,android.os.Handler) -> a
+    void sendDependencyNotInstalledMessage(android.os.Messenger,java.lang.String,java.lang.String) -> a
+    android.os.Messenger getPluginMsgReceiver() -> c
+    void handleNonCmdPluginMessage(android.os.Message) -> b
+    void init(com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo,java.util.UUID,android.os.Messenger,int,int) -> a
+    int getAntDeviceNumber() -> d
+    android.os.Message createCmdMsg(int,android.os.Bundle) -> a
+    android.os.Message sendPluginCommand(android.os.Message) -> c
+    android.os.Message sendPluginCommandInternal(android.os.Message) -> d
+    boolean subscribeToEvent(int) -> a
+    void unsubscribeFromEvent(int) -> b
+    void notifyBindAndRequestFailed(android.os.Bundle) -> a
+    void handleConnectionBroke(java.lang.String) -> a
+    void releaseToken() -> e
+    void sendReleaseCommand(int) -> c
+    void closePluginConnection() -> f
+    void bindPluginService(android.content.Intent,android.os.Bundle) -> a
+    void unbindPluginService() -> h
+    java.lang.String access$000() -> g
+    void access$100(com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,android.os.Bundle) -> a
+    java.util.concurrent.locks.ReentrantLock access$200(com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc) -> a
+com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$1 -> com.dsi.ant.plugins.antplus.pccbase.b:
+    android.os.Bundle val$b -> a
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc this$0 -> b
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$2 -> com.dsi.ant.plugins.antplus.pccbase.c:
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc this$0 -> a
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$3 -> com.dsi.ant.plugins.antplus.pccbase.d:
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc this$0 -> a
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver -> com.dsi.ant.plugins.antplus.pccbase.e:
+    void onDeviceStateChange(com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver -> com.dsi.ant.plugins.antplus.pccbase.f:
+    void onResultReceived(com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$RequestAccessResultHandler -> com.dsi.ant.plugins.antplus.pccbase.g:
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc retPccObject -> a
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver resultReceiver -> b
+    void setReturnInfo(com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver) -> a
+    void handleMessage(android.os.Message) -> handleMessage
+    boolean handleRequestAccessResult(android.os.Message) -> a
+    void handleRequestAccessFailed(java.lang.String,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult) -> a
+com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$RequestAccessResultHandler_AsyncSearchByDevNumber -> com.dsi.ant.plugins.antplus.pccbase.h:
+    boolean handleRequestAccessResult(android.os.Message) -> a
+com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$StandardReleaseHandle -> com.dsi.ant.plugins.antplus.pccbase.i:
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc this$0 -> f
+    void requestCancelled() -> a
+com.dsi.ant.plugins.antplus.pccbase.AntPlusBikeSpdCadCommonPcc -> com.dsi.ant.plugins.antplus.pccbase.AntPlusBikeSpdCadCommonPcc:
+    java.lang.String TAG -> k
+    java.lang.String access$000() -> c
+com.dsi.ant.plugins.antplus.pccbase.AntPlusBikeSpdCadCommonPcc$MultiDeviceSearchSpdCadResult -> com.dsi.ant.plugins.antplus.pccbase.AntPlusBikeSpdCadCommonPcc$MultiDeviceSearchSpdCadResult:
+    com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo mCadenceInfo -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+com.dsi.ant.plugins.antplus.pccbase.AntPlusBikeSpdCadCommonPcc$MultiDeviceSearchSpdCadResult$1 -> com.dsi.ant.plugins.antplus.pccbase.j:
+    com.dsi.ant.plugins.antplus.pccbase.AntPlusBikeSpdCadCommonPcc$MultiDeviceSearchSpdCadResult[] newArray(int) -> a
+    com.dsi.ant.plugins.antplus.pccbase.AntPlusBikeSpdCadCommonPcc$MultiDeviceSearchSpdCadResult createFromParcel(android.os.Parcel) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pccbase.AntPlusCommonPcc -> com.dsi.ant.plugins.antplus.pccbase.k:
+    java.lang.String TAG -> l
+    java.util.concurrent.Semaphore mCommandLock -> k
+    void handlePluginEvent(android.os.Message) -> a
+com.dsi.ant.plugins.antplus.pccbase.AntPlusLegacyCommonPcc -> com.dsi.ant.plugins.antplus.pccbase.l:
+    java.lang.String TAG -> k
+    void handlePluginEvent(android.os.Message) -> a
+com.dsi.ant.plugins.antplus.pccbase.AsyncScanController -> com.dsi.ant.plugins.antplus.pccbase.AsyncScanController:
+    java.lang.String TAG -> a
+    java.lang.String access$000() -> a
+com.dsi.ant.plugins.antplus.pccbase.AsyncScanController$AsyncScanResultDeviceInfo -> com.dsi.ant.plugins.antplus.pccbase.AsyncScanController$AsyncScanResultDeviceInfo:
+    java.util.UUID scanResultInternalIdentifier -> a
+    boolean isAlreadyConnected -> b
+    com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo deviceInfo -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+com.dsi.ant.plugins.antplus.pccbase.AsyncScanController$AsyncScanResultDeviceInfo$1 -> com.dsi.ant.plugins.antplus.pccbase.m:
+    com.dsi.ant.plugins.antplus.pccbase.AsyncScanController$AsyncScanResultDeviceInfo createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.antplus.pccbase.AsyncScanController$AsyncScanResultDeviceInfo[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch -> com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch:
+    java.lang.String TAG -> a
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver mAccessResultReceiver -> b
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver mStateChangeReceiver -> c
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchPcc mPcc -> d
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchCallbacks mCallbacks -> e
+    android.support.v4.app.NotificationCompat$NotificationCompatImplBase mRssiCallback$2833d10 -> f
+    void close() -> a
+    java.lang.String access$000() -> b
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchCallbacks access$100(com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch) -> a
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver access$400(com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch) -> b
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver access$500(com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch) -> c
+    android.support.v4.app.NotificationCompat$NotificationCompatImplBase access$600$555f68a5(com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch) -> d
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchPcc access$700(com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch) -> e
+com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$1 -> com.dsi.ant.plugins.antplus.pccbase.n:
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch this$0 -> a
+    void onResultReceived(com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchPcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+    void onResultReceived(com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$MultiDeviceSearchResult -> com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$MultiDeviceSearchResult:
+    boolean mAlreadyConnected -> a
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType mDeviceType -> b
+    com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo mInfo -> c
+    int resultID -> d
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    com.dsi.ant.plugins.antplus.pcc.defines.DeviceType getAntDeviceType() -> a
+    int getAntDeviceNumber() -> b
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$MultiDeviceSearchResult$1 -> com.dsi.ant.plugins.antplus.pccbase.o:
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$MultiDeviceSearchResult[] newArray(int) -> a
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$MultiDeviceSearchResult createFromParcel(android.os.Parcel) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchCallbacks -> com.dsi.ant.plugins.antplus.pccbase.p:
+    com.ridelogger.SettingsActivity$AntFragment this$1 -> a
+    void onDeviceFound(com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$MultiDeviceSearchResult) -> a
+com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchPcc -> com.dsi.ant.plugins.antplus.pccbase.q:
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch this$0 -> k
+    void requestAccess(android.content.Context,android.os.Bundle) -> a
+    android.content.Intent getServiceBindIntent() -> b
+    int getRequiredServiceVersionForBind() -> a
+    void handlePluginEvent(android.os.Message) -> a
+    void access$300(com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchPcc,android.content.Context,android.os.Bundle) -> a
+com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchReleaseHandle -> com.dsi.ant.plugins.antplus.pccbase.r:
+    boolean successReceived -> f
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch this$0 -> g
+    void requestCancelled() -> a
+    boolean isActive() -> b
+    void onDeviceStateChange(com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+    void onResultReceived(com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$SearchPcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+    void onResultReceived(com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle -> com.dsi.ant.plugins.antplus.pccbase.s:
+    boolean isClosed -> a
+    boolean resultSent -> b
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc receivedDevice -> f
+    java.lang.Object stateLock -> c
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver mResultReceiver -> g
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver mStateReceiver -> h
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver resultSink -> d
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver stateSink -> e
+    void close() -> c
+    boolean isActive() -> b
+    void requestCancelled() -> a
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc access$000(com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle) -> a
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc access$002(com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle,com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc) -> a
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver access$100(com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle) -> b
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver access$200(com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle) -> c
+com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle$1 -> com.dsi.ant.plugins.antplus.pccbase.t:
+    com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle this$0 -> a
+    void onResultReceived(com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle$2 -> com.dsi.ant.plugins.antplus.pccbase.u:
+    boolean deadStateSent -> a
+    com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle this$0 -> b
+    void onDeviceStateChange(com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+com.dsi.ant.plugins.internal.compatibility.LegacyHeartRateCompat -> com.dsi.ant.plugins.internal.a.a:
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$IHeartRateDataReceiver mHeartRateDataReceiver -> a
+    long mEstTimestamp -> b
+    java.util.EnumSet mEventFlags -> c
+    int mComputedHeartRate -> d
+    long mHeartBeatCount -> e
+    com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState mDataState -> f
+    void onNewHeartRateDataTimestamp(long,java.util.EnumSet,java.math.BigDecimal) -> a
+    void onNewHeartRateData(long,java.util.EnumSet,int,long,java.math.BigDecimal,com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState) -> a
+com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider -> com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider:
+    java.lang.String TAG -> a
+    java.lang.String access$000() -> a
+com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo -> com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo:
+    int ipcVersionNumber -> d
+    java.lang.Long device_dbId -> e
+    java.lang.Long plugin_dbId -> f
+    java.lang.Integer antDeviceNumber -> a
+    java.lang.String visibleName -> b
+    java.lang.Boolean isPreferredDevice -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo$1 -> com.dsi.ant.plugins.internal.pluginsipc.a:
+    com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo createFromParcel(android.os.Parcel) -> a
+    com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.dsi.ant.plugins.utility.log.LogAnt -> com.dsi.ant.plugins.a.a.a:
+    int DEBUG_LEVEL_DEFAULT -> a
+    int sDebugLevel -> b
+    java.lang.String sVersion -> c
+    void setDebugLevel(int,android.content.Context) -> a
+    void setDebugLevel(com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel,android.content.Context) -> a
+    int getDebugLevel(android.content.Context) -> a
+    void setVersion(java.lang.String) -> a
+    void e(java.lang.String,java.lang.String) -> a
+    void w(java.lang.String,java.lang.String) -> b
+    void i(java.lang.String,java.lang.String) -> c
+    void d(java.lang.String,java.lang.String) -> d
+    void v(java.lang.String,java.lang.String) -> e
+com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel -> com.dsi.ant.plugins.a.a.b:
+    com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel NONE -> a
+    com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel ERROR -> b
+    com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel WARNING -> c
+    com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel INFO -> d
+    com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel DEBUG -> e
+    com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel VERBOSE -> f
+    com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel[] $VALUES -> g
+    com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel[] values() -> values
+    com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel valueOf(java.lang.String) -> valueOf
+com.dsi.ant.plugins.utility.parcel.ParcelPacker -> com.dsi.ant.plugins.a.b.a:
+    android.os.Parcel mParcel -> a
+    int mStartIndex -> b
+    void finish() -> a
+com.dsi.ant.plugins.utility.parcel.ParcelUnpacker -> com.dsi.ant.plugins.a.b.b:
+    android.os.Parcel mParcel -> a
+    int mEndIndex -> b
+    void finish() -> a
+com.garmin.fit.ActivityMesg -> com.a.a.a:
+    com.garmin.fit.Mesg activityMesg -> a
+com.garmin.fit.BikeProfileMesg -> com.a.a.b:
+    com.garmin.fit.Mesg bikeProfileMesg -> a
+com.garmin.fit.BloodPressureMesg -> com.a.a.c:
+    com.garmin.fit.Mesg bloodPressureMesg -> a
+com.garmin.fit.BpStatus -> com.a.a.d:
+    com.garmin.fit.BpStatus NO_ERROR -> a
+    com.garmin.fit.BpStatus ERROR_INCOMPLETE_DATA -> b
+    com.garmin.fit.BpStatus ERROR_NO_MEASUREMENT -> c
+    com.garmin.fit.BpStatus ERROR_DATA_OUT_OF_RANGE -> d
+    com.garmin.fit.BpStatus ERROR_IRREGULAR_HEART_RATE -> e
+    com.garmin.fit.BpStatus INVALID -> f
+    com.garmin.fit.BpStatus[] $VALUES -> g
+    com.garmin.fit.BpStatus[] values() -> values
+    com.garmin.fit.BpStatus valueOf(java.lang.String) -> valueOf
+com.garmin.fit.CRC -> com.a.a.e:
+    int[] crc16_table -> a
+    int get16(int,byte) -> a
+com.garmin.fit.CadenceZoneMesg -> com.a.a.f:
+    com.garmin.fit.Mesg cadenceZoneMesg -> a
+com.garmin.fit.CapabilitiesMesg -> com.a.a.g:
+    com.garmin.fit.Mesg capabilitiesMesg -> a
+com.garmin.fit.CourseMesg -> com.a.a.h:
+    com.garmin.fit.Mesg courseMesg -> a
+com.garmin.fit.CoursePointMesg -> com.a.a.i:
+    com.garmin.fit.Mesg coursePointMesg -> a
+com.garmin.fit.DateTime -> com.a.a.j:
+    long timestamp -> a
+    java.lang.Long getTimestamp() -> a
+    java.util.Date getDate() -> b
+    java.lang.String toString() -> toString
+com.garmin.fit.DeviceInfoMesg -> com.a.a.k:
+    com.garmin.fit.Mesg deviceInfoMesg -> a
+com.garmin.fit.DeviceSettingsMesg -> com.a.a.l:
+    com.garmin.fit.Mesg deviceSettingsMesg -> a
+com.garmin.fit.EventMesg -> com.a.a.m:
+    com.garmin.fit.Mesg eventMesg -> a
+com.garmin.fit.Factory -> com.a.a.n:
+    com.garmin.fit.Mesg[] mesgs -> a
+    com.garmin.fit.Mesg createMesg(int) -> a
+    com.garmin.fit.Field createField(int,int) -> a
+com.garmin.fit.Field -> com.a.a.o:
+    java.lang.String name -> e
+    int num -> a
+    int type -> b
+    double scale -> f
+    double offset -> g
+    java.lang.String units -> h
+    boolean isAccumulated -> i
+    java.util.ArrayList values -> j
+    java.util.ArrayList components -> c
+    java.util.ArrayList subFields -> d
+    int getSize() -> a
+    com.garmin.fit.SubField getSubField(int) -> a
+    void addValue(java.lang.Object) -> a
+    int getNumValues() -> b
+    java.lang.Object getValueInternal(int,com.garmin.fit.SubField) -> a
+    void setValue(int,java.lang.Object,int) -> a
+    void setValueInternal(int,java.lang.Object,com.garmin.fit.SubField) -> a
+    java.lang.Long getLongValue(int,int) -> a
+    java.lang.Long getLongValueInternal(int,com.garmin.fit.SubField) -> b
+    java.lang.String getStringValueInternal(int,com.garmin.fit.SubField) -> c
+    void write(java.io.OutputStream,com.garmin.fit.FieldDefinition) -> a
+    void write(java.io.OutputStream) -> a
+    void writeValue(java.io.OutputStream,java.lang.Object) -> a
+com.garmin.fit.FieldCapabilitiesMesg -> com.a.a.p:
+    com.garmin.fit.Mesg fieldCapabilitiesMesg -> a
+com.garmin.fit.FieldDefinition -> com.a.a.q:
+    int num -> a
+    int size -> b
+    int type -> c
+    void write(java.io.OutputStream) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.garmin.fit.FileCapabilitiesMesg -> com.a.a.r:
+    com.garmin.fit.Mesg fileCapabilitiesMesg -> a
+com.garmin.fit.FileCreatorMesg -> com.a.a.s:
+    com.garmin.fit.Mesg fileCreatorMesg -> a
+com.garmin.fit.FileEncoder -> com.a.a.t:
+    java.io.File file -> a
+    java.io.FileOutputStream out -> b
+    com.garmin.fit.MesgDefinition[] lastMesgDefinition -> c
+    void open(java.io.File) -> a
+    void writeFileHeader() -> b
+    void write(com.garmin.fit.MesgDefinition) -> a
+    void write(com.garmin.fit.Mesg) -> a
+    void close() -> a
+com.garmin.fit.FileIdMesg -> com.a.a.u:
+    com.garmin.fit.Mesg fileIdMesg -> a
+    void setManufacturer(java.lang.Integer) -> a
+    void setProduct(java.lang.Integer) -> b
+    void setSerialNumber(java.lang.Long) -> a
+com.garmin.fit.Fit -> com.a.a.v:
+    java.lang.Short ENUM_INVALID -> a
+    java.lang.Byte SINT8_INVALID -> b
+    java.lang.Short UINT8_INVALID -> c
+    java.lang.Short SINT16_INVALID -> d
+    java.lang.Integer UINT16_INVALID -> e
+    java.lang.Integer SINT32_INVALID -> f
+    java.lang.Long UINT32_INVALID -> g
+    java.lang.Float FLOAT32_INVALID -> h
+    java.lang.Double FLOAT64_INVALID -> i
+    java.lang.Short UINT8Z_INVALID -> j
+    java.lang.Integer UINT16Z_INVALID -> k
+    java.lang.Long UINT32Z_INVALID -> l
+    java.lang.Short BYTE_INVALID -> m
+    int[] baseTypeSizes -> n
+com.garmin.fit.GoalMesg -> com.a.a.w:
+    com.garmin.fit.Mesg goalMesg -> a
+com.garmin.fit.HrType -> com.a.a.x:
+    com.garmin.fit.HrType NORMAL -> a
+    com.garmin.fit.HrType IRREGULAR -> b
+    com.garmin.fit.HrType INVALID -> c
+    com.garmin.fit.HrType[] $VALUES -> d
+    com.garmin.fit.HrType[] values() -> values
+    com.garmin.fit.HrType valueOf(java.lang.String) -> valueOf
+com.garmin.fit.HrZoneMesg -> com.a.a.y:
+    com.garmin.fit.Mesg hrZoneMesg -> a
+com.garmin.fit.HrmProfileMesg -> com.a.a.z:
+    com.garmin.fit.Mesg hrmProfileMesg -> a
+com.garmin.fit.HrvMesg -> com.a.a.aa:
+    com.garmin.fit.Mesg hrvMesg -> a
+com.garmin.fit.LapMesg -> com.a.a.ab:
+    com.garmin.fit.Mesg lapMesg -> a
+com.garmin.fit.LengthMesg -> com.a.a.ac:
+    com.garmin.fit.Mesg lengthMesg -> a
+com.garmin.fit.MemoGlobMesg -> com.a.a.ad:
+    com.garmin.fit.Mesg memoGlobMesg -> a
+com.garmin.fit.Mesg -> com.a.a.ae:
+    java.lang.String name -> a
+    int num -> b
+    int localNum -> c
+    java.util.ArrayList fields -> d
+    long systemTimeOffset -> e
+    void write(java.io.OutputStream,com.garmin.fit.MesgDefinition) -> a
+    void addField(com.garmin.fit.Field) -> a
+    com.garmin.fit.Field getField(int) -> a
+    int GetActiveSubFieldIndex(int) -> b
+    void setFieldValue(int,int,java.lang.Object,int) -> a
+com.garmin.fit.MesgCapabilitiesMesg -> com.a.a.af:
+    com.garmin.fit.Mesg mesgCapabilitiesMesg -> a
+com.garmin.fit.MesgDefinition -> com.a.a.ag:
+    int num -> c
+    int localNum -> a
+    java.util.ArrayList fields -> b
+    com.garmin.fit.FieldDefinition getField(int) -> a
+    void write(java.io.OutputStream) -> a
+    boolean supports(com.garmin.fit.Mesg) -> a
+    boolean supports(com.garmin.fit.MesgDefinition) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.garmin.fit.MesgNum -> com.a.a.ah:
+    int INVALID -> a
+com.garmin.fit.MetZoneMesg -> com.a.a.ai:
+    com.garmin.fit.Mesg metZoneMesg -> a
+com.garmin.fit.MonitoringInfoMesg -> com.a.a.aj:
+    com.garmin.fit.Mesg monitoringInfoMesg -> a
+com.garmin.fit.MonitoringMesg -> com.a.a.ak:
+    com.garmin.fit.Mesg monitoringMesg -> a
+com.garmin.fit.PadMesg -> com.a.a.al:
+    com.garmin.fit.Mesg padMesg -> a
+com.garmin.fit.PowerZoneMesg -> com.a.a.am:
+    com.garmin.fit.Mesg powerZoneMesg -> a
+com.garmin.fit.RecordMesg -> com.a.a.an:
+    com.garmin.fit.Mesg recordMesg -> a
+    void setTimestamp(com.garmin.fit.DateTime) -> a
+    void setPositionLat(java.lang.Integer) -> a
+    void setPositionLong(java.lang.Integer) -> b
+    void setAltitude(java.lang.Float) -> a
+    void setHeartRate(java.lang.Short) -> a
+    void setCadence(java.lang.Short) -> b
+    void setSpeed(java.lang.Float) -> b
+    void setPower(java.lang.Integer) -> c
+com.garmin.fit.ScheduleMesg -> com.a.a.ao:
+    com.garmin.fit.Mesg scheduleMesg -> a
+com.garmin.fit.SdmProfileMesg -> com.a.a.ap:
+    com.garmin.fit.Mesg sdmProfileMesg -> a
+com.garmin.fit.SessionMesg -> com.a.a.aq:
+    com.garmin.fit.Mesg sessionMesg -> a
+com.garmin.fit.SlaveDeviceMesg -> com.a.a.ar:
+    com.garmin.fit.Mesg slaveDeviceMesg -> a
+com.garmin.fit.SoftwareMesg -> com.a.a.as:
+    com.garmin.fit.Mesg softwareMesg -> a
+com.garmin.fit.SpeedZoneMesg -> com.a.a.at:
+    com.garmin.fit.Mesg speedZoneMesg -> a
+com.garmin.fit.SportMesg -> com.a.a.au:
+    com.garmin.fit.Mesg sportMesg -> a
+com.garmin.fit.SubField -> com.a.a.av:
+    double scale -> a
+    double offset -> b
+    java.util.ArrayList maps -> c
+    java.util.ArrayList components -> d
+    void addMap(int,long) -> a
+    void addComponent$1e9ac4bc(android.support.v4.app.NotificationCompat$NotificationCompatImplBase) -> a
+    boolean canMesgSupport(com.garmin.fit.Mesg) -> a
+com.garmin.fit.SubField$SubFieldMap -> com.a.a.aw:
+    int refFieldNum -> a
+    long refFieldValue -> b
+    boolean canMesgSupport(com.garmin.fit.Mesg) -> a
+com.garmin.fit.TotalsMesg -> com.a.a.ax:
+    com.garmin.fit.Mesg totalsMesg -> a
+com.garmin.fit.UserProfileMesg -> com.a.a.ay:
+    com.garmin.fit.Mesg userProfileMesg -> a
+com.garmin.fit.WeightScaleMesg -> com.a.a.az:
+    com.garmin.fit.Mesg weightScaleMesg -> a
+com.garmin.fit.WorkoutMesg -> com.a.a.ba:
+    com.garmin.fit.Mesg workoutMesg -> a
+com.garmin.fit.WorkoutStepMesg -> com.a.a.bb:
+    com.garmin.fit.Mesg workoutStepMesg -> a
+com.garmin.fit.ZonesTargetMesg -> com.a.a.bc:
+    com.garmin.fit.Mesg zonesTargetMesg -> a
+com.ridelogger.CurrentValuesAdapter -> com.ridelogger.a:
+    com.ridelogger.StartActivity context -> a
+    int[] keys -> b
+    java.lang.String[] values -> c
+    java.lang.String[] keyLabels -> d
+    int size -> e
+    boolean imperial -> f
+    android.content.SharedPreferences settings -> g
+    android.widget.GridView layout -> h
+    void initKeys(java.util.Set) -> a
+    void initKeyLables() -> a
+    void initValues() -> b
+    android.widget.RelativeLayout newRelativeLayout(int) -> a
+    android.widget.TextView newValueTv(int) -> b
+    android.widget.TextView newKeyTv(int) -> c
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    void update(float[]) -> a
+    void setupWidth() -> c
+    com.ridelogger.StartActivity access$0(com.ridelogger.CurrentValuesAdapter) -> a
+    void access$1(com.ridelogger.CurrentValuesAdapter,int) -> a
+    void access$2(com.ridelogger.CurrentValuesAdapter) -> b
+    void access$3(com.ridelogger.CurrentValuesAdapter,java.util.Set) -> a
+    void access$4(com.ridelogger.CurrentValuesAdapter) -> c
+    void access$5(com.ridelogger.CurrentValuesAdapter) -> d
+    android.widget.GridView access$6(com.ridelogger.CurrentValuesAdapter) -> e
+    void access$7(com.ridelogger.CurrentValuesAdapter,boolean) -> a
+com.ridelogger.CurrentValuesAdapter$1 -> com.ridelogger.b:
+    com.ridelogger.CurrentValuesAdapter this$0 -> a
+    void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
+com.ridelogger.GzipWriter -> com.ridelogger.c:
+    void write(java.lang.String) -> a
+    void write(float) -> a
+    void write(java.lang.CharSequence) -> a
+com.ridelogger.RideService -> com.ridelogger.RideService:
+    java.lang.CharSequence[] KEYS -> a
+    long startTime -> b
+    float[] currentValues -> c
+    android.os.Messenger mMessenger -> e
+    boolean rideStarted -> f
+    int sensor_index -> g
+    java.lang.String emergencyNumbuer -> h
+    java.util.Timer timer -> i
+    java.util.Timer timerUI -> j
+    com.ridelogger.listners.Base[] sensors -> k
+    com.ridelogger.formats.BaseFormat fileFormat -> d
+    int[] $SWITCH_TABLE$com$dsi$ant$plugins$antplus$pcc$defines$DeviceType -> l
+    int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    boolean onUnbind(android.content.Intent) -> onUnbind
+    void onDestroy() -> onDestroy
+    void startRide() -> a
+    void phoneCrash(double) -> a
+    void phoneCrashConfirm() -> b
+    void phoneStart() -> c
+    void phoneStop() -> d
+    void smsWithLocation(java.lang.String) -> a
+    void phoneHome() -> e
+    void smsHome(java.lang.String) -> b
+    java.lang.String getLocationLink() -> f
+    void stopRide() -> g
+    java.util.Timer access$0(com.ridelogger.RideService) -> a
+    void access$1(com.ridelogger.RideService,java.util.Timer) -> a
+    int[] $SWITCH_TABLE$com$dsi$ant$plugins$antplus$pcc$defines$DeviceType() -> h
+com.ridelogger.RideService$1 -> com.ridelogger.d:
+    android.os.Messenger replyTo -> a
+    com.ridelogger.RideService this$0 -> b
+    void handleMessage(android.os.Message) -> handleMessage
+    com.ridelogger.RideService access$0(com.ridelogger.RideService$1) -> a
+com.ridelogger.RideService$1$1 -> com.ridelogger.e:
+    com.ridelogger.RideService$1 this$1 -> a
+    void run() -> run
+com.ridelogger.RideService$2 -> com.ridelogger.f:
+    com.ridelogger.RideService this$0 -> a
+    void run() -> run
+com.ridelogger.SettingsActivity -> com.ridelogger.SettingsActivity:
+    java.util.ArrayList foundDevices -> a
+    boolean isValidFragment(java.lang.String) -> isValidFragment
+    void onBuildHeaders(java.util.List) -> onBuildHeaders
+    android.app.ActivityManager$RunningServiceInfo getServiceRunning(java.lang.Class) -> a
+com.ridelogger.SettingsActivity$1 -> com.ridelogger.g:
+    com.ridelogger.SettingsActivity this$0 -> a
+    void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
+com.ridelogger.SettingsActivity$AntFragment -> com.ridelogger.SettingsActivity$AntFragment:
+    com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch mSearch -> a
+    android.preference.MultiSelectListPreference mMultiSelectListPreference -> b
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void initAntSearch() -> a
+    void setupAnt() -> b
+    void updateList(java.util.ArrayList) -> a
+    void onDestroy() -> onDestroy
+    android.preference.MultiSelectListPreference access$0(com.ridelogger.SettingsActivity$AntFragment) -> a
+com.ridelogger.SettingsActivity$AntFragment$1 -> com.ridelogger.h:
+    com.ridelogger.SettingsActivity$AntFragment this$1 -> a
+    android.os.Handler val$handler -> b
+    void run() -> run
+    com.ridelogger.SettingsActivity$AntFragment access$0(com.ridelogger.SettingsActivity$AntFragment$1) -> a
+com.ridelogger.SettingsActivity$AntFragment$1$1 -> com.ridelogger.i:
+    com.ridelogger.SettingsActivity$AntFragment$1 this$2 -> a
+    void run() -> run
+com.ridelogger.SettingsActivity$AntFragment$1$2 -> com.ridelogger.j:
+    com.ridelogger.SettingsActivity$AntFragment$1 this$2 -> a
+    void run() -> run
+com.ridelogger.SettingsActivity$GeneralFragment -> com.ridelogger.SettingsActivity$GeneralFragment:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+com.ridelogger.SettingsActivity$SensorsFragment -> com.ridelogger.SettingsActivity$SensorsFragment:
+    void onCreate(android.os.Bundle) -> onCreate
+com.ridelogger.StartActivity -> com.ridelogger.StartActivity:
+    android.view.MenuItem startMenu -> f
+    android.view.MenuItem stopMenu -> g
+    android.content.ServiceConnection mConnection -> h
+    com.ridelogger.CurrentValuesAdapter currentValuesAdapter -> i
+    android.os.Handler mHandler -> e
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onStop() -> onStop
+    void setupSettings() -> d
+    void stopRide() -> e
+    void bindToService() -> f
+    void unBindToService() -> g
+    void updateValues(android.os.Bundle) -> b
+    boolean onPrepareOptionsMenu(android.view.Menu) -> onPrepareOptionsMenu
+    void startRide() -> h
+    android.app.ActivityManager$RunningServiceInfo getServiceRunning(java.lang.Class) -> a
+    void access$0(android.os.Bundle) -> a
+com.ridelogger.StartActivity$1 -> com.ridelogger.k:
+    void handleMessage(android.os.Message) -> handleMessage
+com.ridelogger.StartActivity$2 -> com.ridelogger.l:
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+com.ridelogger.formats.BaseFormat -> com.ridelogger.a.a:
+    com.ridelogger.GzipWriter buf -> a
+    com.ridelogger.RideService context -> b
+    java.lang.String subExt -> c
+    void createFile() -> a
+    void writeHeader() -> b
+    void writeValues() -> c
+    void writeFooter() -> d
+com.ridelogger.formats.FitFormat -> com.ridelogger.a.b:
+    com.garmin.fit.FileEncoder encoder -> d
+    void createFile() -> a
+    void writeHeader() -> b
+    void writeValues() -> c
+    void writeFooter() -> d
+com.ridelogger.formats.JsonFormat -> com.ridelogger.a.c:
+    void writeHeader() -> b
+    void writeValues() -> c
+    void writeFooter() -> d
+com.ridelogger.listners.Ant -> com.ridelogger.b.a:
+    com.dsi.ant.plugins.antplus.pccbase.PccReleaseHandle releaseHandle -> a
+    int deviceNumber -> b
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IDeviceStateChangeReceiver mDeviceStateChangeReceiver -> c
+    void onDestroy() -> a
+com.ridelogger.listners.Ant$1 -> com.ridelogger.b.b:
+    com.ridelogger.listners.Ant this$0 -> a
+    void onDeviceStateChange(com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+com.ridelogger.listners.Base -> com.ridelogger.b.c:
+    com.ridelogger.RideService context -> d
+    void alterCurrentData(int,float) -> a
+    void alterCurrentData(int[],float[]) -> a
+    float getTs() -> b
+    void onDestroy() -> a
+    void zeroReadings() -> c
+com.ridelogger.listners.Gps -> com.ridelogger.b.d:
+com.ridelogger.listners.Gps$1 -> com.ridelogger.b.e:
+    com.ridelogger.listners.Gps this$0 -> a
+    void onLocationChanged(android.location.Location) -> onLocationChanged
+    void onStatusChanged(java.lang.String,int,android.os.Bundle) -> onStatusChanged
+    void onProviderEnabled(java.lang.String) -> onProviderEnabled
+    void onProviderDisabled(java.lang.String) -> onProviderDisabled
+com.ridelogger.listners.HeartRate -> com.ridelogger.b.f:
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver mResultReceiver -> e
+    void requestAccess() -> d
+    void zeroReadings() -> c
+com.ridelogger.listners.HeartRate$1 -> com.ridelogger.b.g:
+    com.ridelogger.listners.HeartRate this$0 -> a
+    void onResultReceived(com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+    void onResultReceived(com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+    com.ridelogger.listners.HeartRate access$1(com.ridelogger.listners.HeartRate$1) -> a
+com.ridelogger.listners.HeartRate$1$1 -> com.ridelogger.b.h:
+    com.ridelogger.listners.HeartRate$1 this$1 -> a
+    void onNewHeartRateData(long,java.util.EnumSet,int,long,java.math.BigDecimal,com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState) -> a
+com.ridelogger.listners.Power -> com.ridelogger.b.i:
+    java.math.BigDecimal wheelCircumferenceInMeters -> e
+    com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc$IPluginAccessResultReceiver mResultReceiver -> f
+    void requestAccess() -> d
+    void zeroReadings() -> c
+com.ridelogger.listners.Power$1 -> com.ridelogger.b.j:
+    com.ridelogger.listners.Power this$0 -> a
+    void onResultReceived(com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+    void onResultReceived(com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc,com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult,com.dsi.ant.plugins.antplus.pcc.defines.DeviceState) -> a
+    com.ridelogger.listners.Power access$1(com.ridelogger.listners.Power$1) -> a
+com.ridelogger.listners.Power$1$4 -> com.ridelogger.b.k:
+    com.ridelogger.listners.Power$1 this$1 -> a
+    void onNewCalculatedWheelSpeed(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> a
+com.ridelogger.listners.Power$1$5 -> com.ridelogger.b.l:
+    com.ridelogger.listners.Power$1 this$1 -> a
+    void onNewCalculatedWheelDistance(long,java.util.EnumSet,com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource,java.math.BigDecimal) -> a
+com.ridelogger.listners.Sensors -> com.ridelogger.b.m:
+    android.hardware.SensorEventListener luxListner -> a
+    android.hardware.SensorEventListener accelListner -> b
+    android.hardware.SensorEventListener pressListner -> c
+    android.hardware.SensorEventListener tempListner -> e
+    android.hardware.SensorEventListener fieldListner -> f
+    void onDestroy() -> a
+com.ridelogger.listners.Sensors$1 -> com.ridelogger.b.n:
+    com.ridelogger.listners.Sensors this$0 -> a
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+com.ridelogger.listners.Sensors$2 -> com.ridelogger.b.o:
+    boolean crashed -> a
+    java.util.Timer timer -> b
+    double[] St -> c
+    com.ridelogger.listners.Sensors this$0 -> d
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+    void access$0(com.ridelogger.listners.Sensors$2,boolean) -> a
+    com.ridelogger.listners.Sensors access$1(com.ridelogger.listners.Sensors$2) -> a
+com.ridelogger.listners.Sensors$2$1 -> com.ridelogger.b.p:
+    com.ridelogger.listners.Sensors$2 this$1 -> a
+    void run() -> run
+com.ridelogger.listners.Sensors$2$2 -> com.ridelogger.b.q:
+    com.ridelogger.listners.Sensors$2 this$1 -> a
+    void run() -> run
+com.ridelogger.listners.Sensors$3 -> com.ridelogger.b.r:
+    com.ridelogger.listners.Sensors this$0 -> a
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+com.ridelogger.listners.Sensors$4 -> com.ridelogger.b.s:
+    com.ridelogger.listners.Sensors this$0 -> a
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+com.ridelogger.listners.Sensors$5 -> com.ridelogger.b.t:
+    com.ridelogger.listners.Sensors this$0 -> a
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+com.ridelogger.listners.Sensors$6 -> com.ridelogger.b.u:
+    com.ridelogger.listners.Sensors this$0 -> a
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
