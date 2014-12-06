@@ -4,9 +4,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.garmin.fit.ActivityMesg;
 import com.garmin.fit.DateTime;
-import com.garmin.fit.Field;
 import com.garmin.fit.FileEncoder;
 import com.garmin.fit.FileIdMesg;
 import com.garmin.fit.Manufacturer;

@@ -10,6 +10,7 @@ import java.util.TimerTask;
 import com.dsi.ant.plugins.antplus.pcc.defines.DeviceType;
 import com.dsi.ant.plugins.utility.log.LogAnt;
 import com.ridelogger.formats.BaseFormat;
+import com.ridelogger.formats.FitFormat;
 import com.ridelogger.formats.JsonFormat;
 import com.ridelogger.listners.Base;
 import com.ridelogger.listners.Gps;
@@ -220,7 +221,12 @@ public class RideService extends Service
         final String fileName       = filef.format(startDate) + ".json.gz";
 
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-            fileFormat = new JsonFormat(this);
+            if(settings.getBoolean(getString(R.string.PREF_JSON_FILE), false)) {
+                fileFormat = new JsonFormat(this);
+            } else {
+                fileFormat = new FitFormat(this);
+            }
+            
             fileFormat.createFile();
             fileFormat.writeHeader();
             

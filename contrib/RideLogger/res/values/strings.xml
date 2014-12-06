@@ -70,7 +70,7 @@
     
     <string name="searching_for_ants">Searching for Ant+ Devices...</string>
     <string name="found_ants">Found Ant+ Devices, Press to Pair.</string>
-    <string name="no_found_ants">Nothing found to pair.</string>
+    <string name="no_found_ants">No Ant+ Devices Found</string>
     
     <string name="setting_sensors_title">Display Sensors</string>
     <string name="setting_sensors_note">List of Sensors Display</string>
@@ -79,6 +79,9 @@
 
     <string name="imperial_units_title">Imperial Units</string>
     <string name="imperial_units_note">Show Measurements in Imperial Units</string>
+    
+    <string name="file_format_title">Use Advanced JSON.GZ</string>
+    <string name="file_format_note">If not selected a FIT file will be generated</string>
     
     <string name="setting_size_title">Display Text Size</string>
     
@@ -93,5 +96,6 @@
     <string name="PREF_TRACKING_SIZE">TrackingSize</string>
     <string name="PREF_TRACKING_IMPERIAL_UNITS">TrackingImperialUnits</string>
     <string name="PREF_WHEEL_SIZE">WheelSize</string>
+    <string name="PREF_JSON_FILE">JsonFile</string>
     
 </resources>
