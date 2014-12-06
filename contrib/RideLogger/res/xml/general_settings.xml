@@ -3,6 +3,12 @@
         <PreferenceCategory
             android:title="@string/PREFS_NAME"
             android:persistent="true">
+            
+         <CheckBoxPreference
+             android:key="@string/PREF_JSON_FILE"
+             android:title="@string/file_format_title"
+             android:summary="@string/file_format_note"
+             android:defaultValue="true" />
 
         <EditTextPreference
                 android:key="@string/PREF_RIDER_NAME"
