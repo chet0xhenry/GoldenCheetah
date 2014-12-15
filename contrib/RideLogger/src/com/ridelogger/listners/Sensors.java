@@ -14,6 +14,8 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.preference.PreferenceManager;
 
+import com.ridelogger.dft.DftSensorEventListener;
+
 /**
  * Sensors
  * @author Chet Henry
@@ -21,13 +23,13 @@ import android.preference.PreferenceManager;
  */
 public class Sensors extends Base<Object>
 {
-    public static final double  CRASHMAGNITUDE = 30.0;
+    public static final float  CRASHMAGNITUDE = (float) 30.0;
     
-    private SensorEventListener luxListner;
-    private SensorEventListener accelListner;
-    private SensorEventListener pressListner;
-    private SensorEventListener tempListner;
-    private SensorEventListener fieldListner;
+    private SensorEventListener   luxListner;
+    private SensorEventListener   accelListner;
+    private SensorEventListener   pressListner;
+    private SensorEventListener   tempListner;
+    private SensorEventListener   fieldListner;
     
     public Sensors(RideService mContext) 
     {
@@ -60,11 +62,11 @@ public class Sensors extends Base<Object>
         if(mAccel != null) {
             SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
             if(settings.getBoolean(context.getString(R.string.PREF_DETECT_CRASH), false)) {
-                accelListner = new SensorEventListener() {
-                    private boolean crashed = false;
-                    private Timer   timer   = new Timer();
-                    private double[] St     = new double[3];
-        
+                accelListner = new DftSensorEventListener<SensorEventListener>() {
+                    private boolean     crashed = false;
+                    private Timer       timer   = new Timer();
+                    private float[]     St      = new float[3];
+
                     @Override
                     public final void onAccuracyChanged(Sensor sensor, int accuracy) {}
                       
@@ -78,17 +80,23 @@ public class Sensors extends Base<Object>
 
                         alterCurrentData(keys, event.values);
                         
+                        shiftInsert(event.values);
+                        transAndShiftformRadix2();
+                        
+                        alterCurrentData(RideService.CAD, averageDims());
+                        
                         if(St.length == 0) {
                             St[0] = event.values[0];
                             St[1] = event.values[1];
                             St[2] = event.values[2];
                         }
                         
-                        St[0] = 0.6 * event.values[0] + 0.4 * St[0];
-                        St[1] = 0.6 * event.values[1] + 0.4 * St[1];
-                        St[2] = 0.6 * event.values[2] + 0.4 * St[2];
+                        St[0] = (float) 0.6 * event.values[0] + (float) 0.4 * St[0];
+                        St[1] = (float) 0.6 * event.values[1] + (float) 0.4 * St[1];
+                        St[2] = (float) 0.6 * event.values[2] + (float) 0.4 * St[2];
                         
-                        double amag = Math.sqrt(St[0]*St[0] + St[1]*St[1] + St[2]*St[2]);
+                        float amag = (float) Math.sqrt(St[0]*St[0] + St[1]*St[1] + St[2]*St[2]);
+                       
                         
                         if(amag > CRASHMAGNITUDE && !crashed) {
                             crashed = true;
