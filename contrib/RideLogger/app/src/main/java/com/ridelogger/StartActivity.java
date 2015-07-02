@@ -1,10 +1,14 @@
 package com.ridelogger;
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -15,16 +19,29 @@ import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StartActivity extends FragmentActivity
 {                
     private MenuItem startMenu;
     private MenuItem stopMenu;
+    private SQLiteDatabase db;
     
     private ServiceConnection mConnection;
     private static CurrentValuesAdapter currentValuesAdapter;
+
+    private List<Integer> activity_ids;
+    private List<String> activities;
+
 
     
     @Override
@@ -58,11 +75,14 @@ public class StartActivity extends FragmentActivity
     protected void onCreate(Bundle savedInstanceState)
     {    
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
-        
-        GridView layout = (GridView) findViewById(R.id.LayoutData);
-        currentValuesAdapter = new CurrentValuesAdapter(this, layout);
-        layout.setAdapter(currentValuesAdapter);
+        Db dbHelper = new Db(this);
+
+        db = dbHelper.getReadableDatabase();
+
+        activities = new ArrayList<String>();
+        activity_ids = new ArrayList<Integer>();
+
+        refreshRideList();
     }
     
     
@@ -83,7 +103,45 @@ public class StartActivity extends FragmentActivity
         super.onStop();
         unBindToService();
     }
-    
+
+
+    private void refreshRideList(){
+        Cursor c = db.rawQuery("SELECT id, name, start_ts FROM Activity ORDER BY start_ts DESC", null);
+        activities.clear();
+        activity_ids.clear();
+
+        if (c != null ) {
+            if  (c.moveToFirst()) {
+                do {
+                    activity_ids.add(c.getInt(0));
+                    String name = c.getString(1);
+                    String start_ts = c.getString(2);
+                    activities.add(name + " - " + start_ts);
+                }while (c.moveToNext());
+            }
+        }
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                activities );
+
+        setContentView(R.layout.activity_list);
+        ListView layout = (ListView) findViewById(R.id.listView);
+
+        layout.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int aid = activity_ids.get(position);
+            }
+
+        });
+
+        layout.setAdapter(arrayAdapter);
+
+        getActionBar().setTitle("Ride Logger - Rides");
+    }
     
     /**
      * setup the settings for the user
@@ -103,7 +161,7 @@ public class StartActivity extends FragmentActivity
         
         Intent rsi = new Intent(this, RideService.class);
         this.stopService(rsi);
-        finish();
+        refreshRideList();
     }
     
     private static final Handler mHandler = new Handler(){
@@ -138,6 +196,13 @@ public class StartActivity extends FragmentActivity
             };
             
             bindService(new Intent(StartActivity.this, RideService.class), mConnection, Context.BIND_AUTO_CREATE);
+
+            setContentView(R.layout.activity_dashboard);
+            GridView layout = (GridView) findViewById(R.id.LayoutData);
+            currentValuesAdapter = new CurrentValuesAdapter(this, layout);
+            layout.setAdapter(currentValuesAdapter);
+        } else {
+            refreshRideList();
         }
     }
     
@@ -195,6 +260,8 @@ public class StartActivity extends FragmentActivity
         
         Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.starting_ride), Toast.LENGTH_LONG);
         toast.show();
+
+        getActionBar().setTitle("Ride Logger - Riding");
     }
     
     

@@ -1,6 +1,8 @@
 package com.ridelogger.listners;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -15,15 +17,15 @@ import com.ridelogger.RideService;
  */
 public class Gps extends Base<Gps>
 {
-    final SQLiteStatement insertGps;
+    private final SQLiteStatement insertGps;
     
     public Gps(RideService mContext) 
     {
         super(mContext);
         
         insertGps = context.db.compileStatement(
-            "INSERT INTO Gps (rt, aid, alt, kph, bear, gpsa, lat, lon) " + 
-            "VALUES (?, " + Integer.toString(context.aid) + ", ?, ?, ?, ?, ?, ?)"
+            "INSERT OR REPLACE INTO Gps (rt, aid, alt, kph, bear, gpsa, lat, lon) " +
+            "VALUES (?, " + Long.toString(context.aid) + ", ?, ?, ?, ?, ?, ?)"
         );
         
         LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
@@ -31,7 +33,7 @@ public class Gps extends Base<Gps>
         //listen to gps events and log them
         LocationListener locationListener = new LocationListener() {
                 public void onLocationChanged(Location location) {
-                    float val = getTS();
+                    float val = getTs();
                     context.currentValues[RideService.SECS] = val;
                     insertGps.bindDouble(1, val);
                    
@@ -60,6 +62,7 @@ public class Gps extends Base<Gps>
                     insertGps.bindDouble(7, val);
                     
                     insertGps.execute();
+                    insertGps.clearBindings();
                 }
             
                 @Override
@@ -73,5 +76,10 @@ public class Gps extends Base<Gps>
           };
           
           locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+    }
+
+
+    public static void onCreate(SQLiteDatabase db, Context context) {
+        executeSQLScript(db, "Gps.sql", context);
     }
 }

@@ -2,6 +2,8 @@ package com.ridelogger.listners;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -24,20 +26,24 @@ public class Sensors extends Base<Object>
     private static final double  CRASHMAGNITUDE = 30.0;
     
     private SensorEventListener luxListner;
-    final SQLiteStatement insertLux;
+    private final SQLiteStatement insertLux;
     
     private SensorEventListener accelListner;
-    final SQLiteStatement insertAccel;
+    private final SQLiteStatement insertAccel;
    
     private SensorEventListener pressListner;
-    final SQLiteStatement insertPress;
+    private final SQLiteStatement insertPress;
     
     private SensorEventListener tempListner;
-    final SQLiteStatement insertTemp;
+    private final SQLiteStatement insertTemp;
     
     private SensorEventListener fieldListner;
-    final SQLiteStatement insertField;
+    private final SQLiteStatement insertField;
     
+    public static void onCreate(SQLiteDatabase db, Context context) {
+        executeSQLScript(db, "Sensors.sql", context);
+    }
+
     public Sensors(RideService mContext) 
     {
         super(mContext);
@@ -52,8 +58,8 @@ public class Sensors extends Base<Object>
           
         if(mLight != null) {
             insertLux = context.db.compileStatement(
-                "INSERT INTO AndroidLux (rt, aid, lux) " + 
-                "VALUES (?, " + Integer.toString(context.aid) + ", ?)"
+                "INSERT OR REPLACE INTO AndroidLux (rt, aid, lux) " +
+                "VALUES (?, " + Long.toString(context.aid) + ", ?)"
             );
 
             luxListner = new SensorEventListener() {
@@ -64,7 +70,7 @@ public class Sensors extends Base<Object>
                 public final void onSensorChanged(SensorEvent event) {
                     // The light sensor returns a single value.
                     // Many sensors return 3 values, one for each axis.
-                    float val = getTS();
+                    float val = getTs();
                     context.currentValues[RideService.SECS] = val;
                     insertLux.bindDouble(1, val);
   
@@ -73,16 +79,19 @@ public class Sensors extends Base<Object>
                     insertLux.bindDouble(2, val);
 
                     insertLux.execute();
+                    insertLux.clearBindings();
                 }
             };
             
             mSensorManager.registerListener(luxListner,   mLight, 3000000);
+        } else {
+            insertLux = null;
         }
         
         if(mAccel != null) {
             insertAccel = context.db.compileStatement(
-                "INSERT INTO AndroidAccel (rt, aid, ms2x, ms2y, ms2z) " + 
-                "VALUES (?, " + Integer.toString(context.aid) + ", ?, ?, ?)"
+                "INSERT OR REPLACE INTO AndroidAccel (rt, aid, ms2x, ms2y, ms2z) " +
+                "VALUES (?, " + Long.toString(context.aid) + ", ?, ?, ?)"
             );
             
             SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
@@ -97,7 +106,7 @@ public class Sensors extends Base<Object>
                       
                     @Override
                     public final void onSensorChanged(SensorEvent event) {                
-                        float val = getTS();
+                        float val = getTs();
                         context.currentValues[RideService.SECS] = val;
                         insertAccel.bindDouble(1, val);
   
@@ -114,6 +123,7 @@ public class Sensors extends Base<Object>
                         insertAccel.bindDouble(3, val);
 
                         insertAccel.execute();
+                        insertAccel.clearBindings();
                         
                         if(St.length == 0) {
                             St[0] = event.values[0];
@@ -169,7 +179,7 @@ public class Sensors extends Base<Object>
                       
                     @Override
                     public final void onSensorChanged(SensorEvent event) {                                        
-                        float val = getTS();
+                        float val = getTs();
                         context.currentValues[RideService.SECS] = val;
                         insertAccel.bindDouble(1, val);
   
@@ -184,17 +194,22 @@ public class Sensors extends Base<Object>
                         val = event.values[2];
                         context.currentValues[RideService.ms2z] = val;
                         insertAccel.bindDouble(3, val);
+
+                        insertAccel.execute();
+                        insertAccel.clearBindings();
                     }
                 };
             }
 
             mSensorManager.registerListener(accelListner, mAccel, SensorManager.SENSOR_DELAY_NORMAL);
+        } else {
+            insertAccel = null;
         }
         
         if(mPress != null) {
             insertPress = context.db.compileStatement(
-                "INSERT INTO AndroidPress (rt, aid, press) " + 
-                "VALUES (?, " + Integer.toString(context.aid) + ", ?)"
+                "INSERT OR REPLACE INTO AndroidPress (rt, aid, press) " +
+                "VALUES (?, " + Long.toString(context.aid) + ", ?)"
             );
             
             pressListner = new SensorEventListener() {
@@ -203,7 +218,7 @@ public class Sensors extends Base<Object>
                 
                 @Override
                 public final void onSensorChanged(SensorEvent event) {
-                    float val = getTS();
+                    float val = getTs();
                     context.currentValues[RideService.SECS] = val;
                     insertPress.bindDouble(1, val);
   
@@ -212,16 +227,19 @@ public class Sensors extends Base<Object>
                     insertPress.bindDouble(2, val);
 
                     insertPress.execute();
+                    insertPress.clearBindings();
                 }
             };
             
             mSensorManager.registerListener(pressListner, mPress, 3000000);
+        } else {
+            insertPress = null;
         }
         
         if(mTemp != null) {
             insertTemp = context.db.compileStatement(
-                "INSERT INTO AndroidTemp (rt, aid, temp) " + 
-                "VALUES (?, " + Integer.toString(context.aid) + ", ?)"
+                "INSERT OR REPLACE INTO AndroidTemp (rt, aid, temp) " +
+                "VALUES (?, " + Long.toString(context.aid) + ", ?)"
             );
             
             tempListner = new SensorEventListener() {
@@ -230,7 +248,7 @@ public class Sensors extends Base<Object>
                 
                 @Override
                 public final void onSensorChanged(SensorEvent event) {
-                    float val = getTS();
+                    float val = getTs();
                     context.currentValues[RideService.SECS] = val;
                     insertTemp.bindDouble(1, val);
   
@@ -239,16 +257,19 @@ public class Sensors extends Base<Object>
                     insertTemp.bindDouble(2, val);
 
                     insertTemp.execute();
+                    insertTemp.clearBindings();
                 }
             };
             
             mSensorManager.registerListener(tempListner,  mTemp,  3000000);
+        } else {
+            insertTemp = null;
         }
         
         if(mField != null) {
             insertField = context.db.compileStatement(
-                "INSERT INTO AndroidField (rt, aid, uTx, uTy, uTz) " + 
-                "VALUES (?, " + Integer.toString(context.aid) + ", ?, ?, ?)"
+                "INSERT OR REPLACE INTO AndroidField (rt, aid, uTx, uTy, uTz) " +
+                "VALUES (?, " + Long.toString(context.aid) + ", ?, ?, ?)"
             );
             
             fieldListner = new SensorEventListener() {
@@ -257,7 +278,7 @@ public class Sensors extends Base<Object>
                 
                 @Override
                 public final void onSensorChanged(SensorEvent event) {                  
-                    float val = getTS();
+                    float val = getTs();
                     context.currentValues[RideService.SECS] = val;
                     insertField.bindDouble(1, val);
   
@@ -274,10 +295,14 @@ public class Sensors extends Base<Object>
                     insertField.bindDouble(4, val);
                     
                     insertField.execute();
+                    insertField.clearBindings();
                 }
             };
             
             mSensorManager.registerListener(fieldListner, mField, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+        else {
+            insertField = null;
         }
     }
     

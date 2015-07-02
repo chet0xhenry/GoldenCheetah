@@ -1,9 +1,0 @@
-# view AndroidManifest.xml #generated:23
--keep class com.ridelogger.RideService { <init>(...); }
-
-# view AndroidManifest.xml #generated:38
--keep class com.ridelogger.SettingsActivity { <init>(...); }
-
-# view AndroidManifest.xml #generated:29
--keep class com.ridelogger.StartActivity { <init>(...); }
-

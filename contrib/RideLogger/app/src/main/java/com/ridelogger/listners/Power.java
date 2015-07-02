@@ -1,5 +1,7 @@
 package com.ridelogger.listners;
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.preference.PreferenceManager;
 
 import com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc;
@@ -31,39 +33,43 @@ public class Power extends Ant
     private final BigDecimal wheelCircumferenceInMeters; //size of wheel to calculate speed
     private final IPluginAccessResultReceiver<AntPlusBikePowerPcc> mResultReceiver;
     
-    final SQLiteStatement insertPower;
-    final SQLiteStatement insertTorque;
-    final SQLiteStatement insertCadence;
-    final SQLiteStatement insertSpeed;
-    final SQLiteStatement insertDistance;
+    private final SQLiteStatement insertPower;
+    private final SQLiteStatement insertTorque;
+    private final SQLiteStatement insertCadence;
+    private final SQLiteStatement insertSpeed;
+    private final SQLiteStatement insertDistance;
+
+    public static void onCreate(SQLiteDatabase db, Context context) {
+        executeSQLScript(db, "Power.sql", context);
+    }
 
     //setup listeners and logging 
     public Power(int pDeviceNumber, RideService mContext) {
         super(pDeviceNumber, mContext);
         
         insertPower = context.db.compileStatement(
-            "INSERT INTO AntPower (rt, aid, watts) " + 
-            "VALUES (?, " + Integer.toString(context.aid) + ", ?)"
+            "INSERT OR REPLACE INTO AntPower (rt, aid, watts) " +
+            "VALUES (?, " + Long.toString(context.aid) + ", ?)"
         );
         
         insertTorque = context.db.compileStatement(
-            "INSERT INTO AntTorque (rt, aid, nm) " + 
-            "VALUES (?, " + Integer.toString(context.aid) + ", ?)"
+            "INSERT OR REPLACE INTO AntTorque (rt, aid, nm) " +
+            "VALUES (?, " + Long.toString(context.aid) + ", ?)"
         );
         
         insertCadence = context.db.compileStatement(
-            "INSERT INTO AntCadence (rt, aid, cad) " + 
-            "VALUES (?, " + Integer.toString(context.aid) + ", ?)"
+            "INSERT OR REPLACE INTO AntCadence (rt, aid, cad) " +
+            "VALUES (?, " + Long.toString(context.aid) + ", ?)"
         );
 
         insertSpeed = context.db.compileStatement(
-            "INSERT INTO AntSpeed (rt, aid, kph) " + 
-            "VALUES (?, " + Integer.toString(context.aid) + ", ?)"
+            "INSERT OR REPLACE INTO AntSpeed (rt, aid, kph) " +
+            "VALUES (?, " + Long.toString(context.aid) + ", ?)"
         );
 
         insertDistance = context.db.compileStatement(
-            "INSERT INTO AntDistance (rt, aid, km) " + 
-            "VALUES (?, " + Integer.toString(context.aid) + ", ?)"
+            "INSERT OR REPLACE INTO AntDistance (rt, aid, km) " +
+            "VALUES (?, " + Long.toString(context.aid) + ", ?)"
         );
 
         wheelCircumferenceInMeters = new BigDecimal(
@@ -81,7 +87,7 @@ public class Power extends Ant
                    result.subscribeCalculatedPowerEvent(new ICalculatedPowerReceiver() {
                            @Override
                            public void onNewCalculatedPower(final long estTimestamp, final EnumSet<EventFlag> eventFlags, final DataSource dataSource, final BigDecimal calculatedPower) {
-                               float val = getTS();
+                               float val = getTs();
                                context.currentValues[RideService.SECS] = val;
                                insertPower.bindDouble(1, val);
   
@@ -90,6 +96,7 @@ public class Power extends Ant
                                insertPower.bindDouble(2, val);
 
                                insertPower.execute();
+                               insertPower.clearBindings();
                            }
                        }
                    );
@@ -98,7 +105,7 @@ public class Power extends Ant
                        new ICalculatedTorqueReceiver() {
                            @Override
                            public void onNewCalculatedTorque(final long estTimestamp, final EnumSet<EventFlag> eventFlags, final DataSource dataSource, final BigDecimal calculatedTorque) {
-                               float val = getTS();
+                               float val = getTs();
                                context.currentValues[RideService.SECS] = val;
                                insertTorque.bindDouble(1, val);
   
@@ -107,6 +114,7 @@ public class Power extends Ant
                                insertTorque.bindDouble(2, val);
 
                                insertTorque.execute();
+                               insertTorque.clearBindings();
                            }
                        }
                    );
@@ -115,7 +123,7 @@ public class Power extends Ant
                        new ICalculatedCrankCadenceReceiver() {
                            @Override
                            public void onNewCalculatedCrankCadence(final long estTimestamp, final EnumSet<EventFlag> eventFlags, final DataSource dataSource, final BigDecimal calculatedCrankCadence) {
-                               float val = getTS();
+                               float val = getTs();
                                context.currentValues[RideService.SECS] = val;
                                insertCadence.bindDouble(1, val);
   
@@ -124,6 +132,7 @@ public class Power extends Ant
                                insertCadence.bindDouble(2, val);
 
                                insertCadence.execute();
+                               insertCadence.clearBindings();
                            }
                        }
                    );
@@ -133,7 +142,7 @@ public class Power extends Ant
                            @Override
                            public void onNewCalculatedWheelSpeed(final long estTimestamp, final EnumSet<EventFlag> eventFlags, final DataSource dataSource, final BigDecimal calculatedWheelSpeed)
                            {
-                               float val = getTS();
+                               float val = getTs();
                                context.currentValues[RideService.SECS] = val;
                                insertSpeed.bindDouble(1, val);
   
@@ -142,6 +151,7 @@ public class Power extends Ant
                                insertSpeed.bindDouble(2, val);
 
                                insertSpeed.execute();
+                               insertSpeed.clearBindings();
                            }
                        }
                    );
@@ -151,7 +161,7 @@ public class Power extends Ant
                            @Override
                            public void onNewCalculatedWheelDistance(final long estTimestamp, final EnumSet<EventFlag> eventFlags, final DataSource dataSource, final BigDecimal calculatedWheelDistance) 
                            {
-                               float val = getTS();
+                               float val = getTs();
                                context.currentValues[RideService.SECS] = val;
                                insertDistance.bindDouble(1, val);
   
@@ -160,6 +170,7 @@ public class Power extends Ant
                                insertDistance.bindDouble(2, val);
 
                                insertDistance.execute();
+                               insertDistance.clearBindings();
                            }
                        }
                    );
@@ -169,7 +180,7 @@ public class Power extends Ant
                            @Override
                            public void onNewInstantaneousCadence(final long estTimestamp, final EnumSet<EventFlag> eventFlags, final DataSource dataSource, final int instantaneousCadence)
                            {
-                               float val = getTS();
+                               float val = getTs();
                                context.currentValues[RideService.SECS] = val;
                                insertCadence.bindDouble(1, val);
   
@@ -178,6 +189,7 @@ public class Power extends Ant
                                insertCadence.bindDouble(2, val);
 
                                insertCadence.execute();
+                               insertCadence.clearBindings();
                            }
                        }
                    );
@@ -187,7 +199,7 @@ public class Power extends Ant
                            @Override
                            public void onNewRawPowerOnlyData(final long estTimestamp, final EnumSet<EventFlag> eventFlags, final long powerOnlyUpdateEventCount, final int instantaneousPower, final long accumulatedPower)
                            {
-                               float val = getTS();
+                               float val = getTs();
                                context.currentValues[RideService.SECS] = val;
                                insertPower.bindDouble(1, val);
   
@@ -196,6 +208,7 @@ public class Power extends Ant
                                insertPower.bindDouble(2, val);
 
                                insertPower.execute();
+                               insertPower.clearBindings();
                            }
                        }
                    );
@@ -282,12 +295,6 @@ public class Power extends Ant
     
     protected void requestAccess() {
         releaseHandle = AntPlusBikePowerPcc.requestAccess(context, deviceNumber, 0, mResultReceiver, mDeviceStateChangeReceiver);
-    }
-    
-    
-    @Override
-    public void zeroReadings()
-    {   
     }
 }
 

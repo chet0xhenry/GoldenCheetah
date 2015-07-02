@@ -6,6 +6,11 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.ridelogger.listners.Gps;
+import com.ridelogger.listners.HeartRate;
+import com.ridelogger.listners.Power;
+import com.ridelogger.listners.Sensors;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,13 +30,18 @@ public class Db extends SQLiteOpenHelper {
     }
 
     public void onCreate(SQLiteDatabase db) {
-        executeSQLScript(db, "schema.sql");
+        executeSQLScript(db, "Activity.sql");
+        HeartRate.onCreate(db, context);
+        Power.onCreate(db, context);
+        Sensors.onCreate(db, context);
+        Gps.onCreate(db, context);
     }
+
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // This database is only a cache for online data, so its upgrade policy is
         // to simply to discard the data and start over
-        executeSQLScript(db, "schema.sql");
     }
+
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
     }

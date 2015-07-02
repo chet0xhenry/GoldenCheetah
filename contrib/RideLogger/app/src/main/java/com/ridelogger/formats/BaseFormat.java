@@ -1,19 +1,13 @@
 package com.ridelogger.formats;
 
-import android.content.res.AssetManager;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
 
 import com.ridelogger.GzipWriter;
 import com.ridelogger.RideService;
 
 import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

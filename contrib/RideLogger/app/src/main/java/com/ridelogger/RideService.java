@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -45,7 +46,7 @@ import java.util.TimerTask;
  */
 public class RideService extends Service
 {    
-    private static final int notifyID     = 1;                  //Id of the notification in the top android bar that this class creates and alters
+    private static final int notifyID     = 1; //Id of the notification in the top android bar that this class creates and alters
     
     public static final int SECS         = 0;
     public static final int KPH          = 1;
@@ -59,10 +60,10 @@ public class RideService extends Service
     public static final int NM           = 9;
     public static final int CAD          = 10;
     public static final int KM           = 11;
-    public static final int LTE          = 12;
-    public static final int RTE          = 13;
-    public static final int SNPLC        = 14;
-    public static final int SNPR         = 15;
+    //public static final int LTE          = 12;
+    //public static final int RTE          = 13;
+    //public static final int SNPLC        = 14;
+    //public static final int SNPR         = 15;
     public static final int ms2x         = 16;
     public static final int ms2y         = 17;
     public static final int ms2z         = 18;
@@ -102,8 +103,8 @@ public class RideService extends Service
     };
 
 
-    public SQLiteDatabase      db;
-    public GzipWriter          buf;                                                //writes to log file buffered
+    public SQLiteDatabase      db;                                                 //database to save rides to
+    public long                aid;                                                //activity id to link sensor records to
     public long                startTime;                                          //start time of the ride
     public final float[]       currentValues = new float[RideService.KEYS.length]; //float array of current values
     private Messenger          mMessenger    = null;                               //class to send back current values if needed
@@ -113,7 +114,8 @@ public class RideService extends Service
     private Timer              timer;                                              //timer class to control the periodic messages
     private Timer              timerUI;                                            //timer class to control the periodic messages
     private Base<?>[]          sensors;                                            //list of sensors tracking
-    public BaseFormat<?>       fileFormat;
+//  public BaseFormat<?>       fileFormat;
+//  public GzipWriter          buf;                                                //writes to log file buffered
 
     
     /**
@@ -198,35 +200,42 @@ public class RideService extends Service
      */
     private void startRide() {
         if(rideStarted) return;
-        
-        SharedPreferences settings  = PreferenceManager.getDefaultSharedPreferences(this);
-        emergencyNumbuer            = settings.getString(getString(R.string.PREF_EMERGENCY_NUMBER), "");
-        currentValues[SECS]         = (float) 0.0;
-        
+       
         startTime                   = System.currentTimeMillis();
-        
-        
         Date startDate              = new Date(startTime);        
         
         SimpleDateFormat startTimef = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        SimpleDateFormat filef      = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
-        SimpleDateFormat month      = new SimpleDateFormat("MMMMM");
-        SimpleDateFormat year       = new SimpleDateFormat("yyyy");
-        SimpleDateFormat day        = new SimpleDateFormat("EEEEE");
         
         startTimef.setTimeZone(TimeZone.getTimeZone("UTC"));
-        filef.setTimeZone(TimeZone.getTimeZone("UTC"));     
-        month.setTimeZone(TimeZone.getTimeZone("UTC"));     
-        year.setTimeZone(TimeZone.getTimeZone("UTC"));      
-        day.setTimeZone(TimeZone.getTimeZone("UTC"));       
         
-        final String fileName       = filef.format(startDate) + ".json.gz";
+        Db dbHelper = new Db(this);
+         
+        db = dbHelper.getWritableDatabase();
+        
+        SQLiteStatement stmt = db.compileStatement(
+            "INSERT INTO Activity (name, type, start_ts) VALUES (?, ?, ?)"
+        ); 
+
+        stmt.bindString(1, "Bike Ride");
+        stmt.bindString(2, "cycling");
+        stmt.bindString(3, startTimef.format(startDate)); 
+
+        aid = stmt.executeInsert();
+        stmt.clearBindings();
+
+        SharedPreferences settings  = PreferenceManager.getDefaultSharedPreferences(this);
+        emergencyNumbuer            = settings.getString(getString(R.string.PREF_EMERGENCY_NUMBER), "");
+        currentValues[SECS]         = (float) 0.0;
+
+//      SimpleDateFormat filef      = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+//      filef.setTimeZone(TimeZone.getTimeZone("UTC"));     
+//      final String fileName       = filef.format(startDate) + ".json.gz";
+//      fileFormat = new JsonFormat(this);
+//      fileFormat.createFile();
+//      fileFormat.writeHeader();
+//      fileFormat.writeFooter();
 
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-            fileFormat = new JsonFormat(this);
-            fileFormat.createFile();
-            fileFormat.writeHeader();
-            
             LogAnt.setDebugLevel(LogAnt.DebugLevel.NONE, this);
             
             final Set<String> pairedAnts = settings.getStringSet(getString(R.string.PREF_PAIRED_ANTS), null);
@@ -300,7 +309,7 @@ public class RideService extends Service
             .Builder(this)
             .setSmallIcon(R.drawable.ic_launcher)
             .setContentTitle(getString(R.string.ride_on))
-            .setContentText(getString(R.string.building_ride) + " " + fileName + " " + getString(R.string.click_to_stop))
+            .setContentText(getString(R.string.building_ride) + " " + getString(R.string.click_to_stop))
             .setProgress(0, 0, true)
             .setContentIntent(
                 TaskStackBuilder
@@ -409,7 +418,6 @@ public class RideService extends Service
             timerUI = null;
         }
         
-        fileFormat.writeFooter();
         
         rideStarted = false;
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);

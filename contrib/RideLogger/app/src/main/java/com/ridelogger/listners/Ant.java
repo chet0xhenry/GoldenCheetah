@@ -1,5 +1,8 @@
 package com.ridelogger.listners;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
 import com.dsi.ant.plugins.antplus.pcc.defines.DeviceState;
 import com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc.IDeviceStateChangeReceiver;
 import com.dsi.ant.plugins.antplus.pccbase.AntPluginPcc.IPluginAccessResultReceiver;
@@ -18,6 +21,9 @@ public abstract class Ant extends Base<Object>
     public              IPluginAccessResultReceiver<?> mResultReceiver;  //Receiver class
     int                 deviceNumber = 0;
     
+    public static void onCreate(SQLiteDatabase db, Context context) {
+        executeSQLScript(db, "Ant.sql", context);
+    }
     
     //setup listeners and logging 
     Ant(int pDeviceNumber, RideService mContext)
@@ -32,9 +38,9 @@ public abstract class Ant extends Base<Object>
         @Override
         public void onDeviceStateChange(final DeviceState newDeviceState){
             //if we lose a device zero out its values
-            if(newDeviceState.equals(DeviceState.DEAD)) {
+            /*if(newDeviceState.equals(DeviceState.DEAD)) {
                 zeroReadings();
-            }
+            }*/
         }
     };
     

@@ -1,5 +1,9 @@
 package com.ridelogger.listners;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
+
 import com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc;
 import com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc.DataState;
 import com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc.IHeartRateDataReceiver;
@@ -21,14 +25,18 @@ public class HeartRate extends Ant
 {
     private final IPluginAccessResultReceiver<AntPlusHeartRatePcc> mResultReceiver;
     
-    final SQLiteStatement insertHr;
+    private SQLiteStatement insertHr;
+    
+    public static void onCreate(SQLiteDatabase db, Context context) {
+        executeSQLScript(db, "HeartRate.sql", context);
+    }
     
     public HeartRate(int pDeviceNumber, RideService mContext) {
         super(pDeviceNumber, mContext);
         
         insertHr = context.db.compileStatement(
-            "INSERT AntHeartRate (rt, aid, hr) " + 
-            "VALUES (?, " + Integer.toString(context.aid) + ", ?)"
+            "INSERT OR REPLACE INTO AntHeartRate (rt, aid, hr) " +
+            "VALUES (?, " + Long.toString(context.aid) + ", ?)"
         );
 
         mResultReceiver = new IPluginAccessResultReceiver<AntPlusHeartRatePcc>() {
@@ -42,7 +50,7 @@ public class HeartRate extends Ant
                         new IHeartRateDataReceiver() {
                             @Override
                             public void onNewHeartRateData(final long estTimestamp, EnumSet<EventFlag> eventFlags, final int computedHeartRate, final long heartBeatCount, final BigDecimal heartBeatEventTime, final DataState dataState) {
-                                float val = getTS();
+                                float val = getTs();
                                 context.currentValues[RideService.SECS] = val;
                                 insertHr.bindDouble(1, val);
                     
@@ -51,6 +59,7 @@ public class HeartRate extends Ant
                                 insertHr.bindDouble(2, val);
 
                                 insertHr.execute();
+                                insertHr.clearBindings();
                             }
                         }
                     );
@@ -71,15 +80,5 @@ public class HeartRate extends Ant
     @Override
     protected void requestAccess() {
         releaseHandle = AntPlusHeartRatePcc.requestAccess(context, deviceNumber, 0, mResultReceiver, mDeviceStateChangeReceiver);
-    }
-    
-    
-    
-    
-    
-    @Override
-    public void zeroReadings()
-    {
-        alterCurrentData(RideService.HR, (float) 0.0);
     }
 }

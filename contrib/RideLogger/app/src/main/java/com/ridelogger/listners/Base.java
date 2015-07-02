@@ -1,5 +1,6 @@
 package com.ridelogger.listners;
 
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -26,33 +27,9 @@ public class Base<T>
         //initStatments
         //someStatment = context.db.compileStatement("PARAMED SQL...");
     }
-
-
-    void alterCurrentData(int key, float value)
-    {
-        synchronized (context.currentValues) {
-            context.currentValues[RideService.SECS] = getTs();
-            context.currentValues[key] = value;
-        }
-    }
-
-    
-    void alterCurrentData(int[] keys, float[] values)
-    {
-        synchronized (context.currentValues) {
-            context.currentValues[RideService.SECS] = getTs();
-            
-            int i = 0;
-            for (int key : keys) {
-                context.currentValues[key] = values[i];
-                i++;
-            }
-        }
-    }
-    
     
     //get current time stamp
-    private float getTs() {
+    float getTs() {
         return (float) ((System.currentTimeMillis() - context.startTime) / 1000.0);   
     }
     
@@ -60,19 +37,19 @@ public class Base<T>
     //Clean up my listeners and statments here
     public void onDestroy() {}
     
-    //zero any of my values
-    void zeroReadings() {}
-
-    public void onUpgrade(int oldVersion, int newVersion) {
-        executeSQLScript("base.sql");
+    public static void onCreate(SQLiteDatabase db, Context context) {
+        executeSQLScript(db, "Base.sql", context);
+    }
+   
+    public static void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion, Context context) {
+        onCreate(db, context);
     }
 
-    public void onDowngrade(int oldVersion, int newVersion) {
-        onUpgrade(oldVersion, newVersion);
+    public static void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion, Context context) {
     }
 
 
-    protected void executeSQLScript(String filename) {
+    protected static void executeSQLScript(SQLiteDatabase db, String filename, Context context) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         byte buf[] = new byte[1024];
         int len;
@@ -92,7 +69,7 @@ public class Base<T>
                 String sqlStatement = createScript[i].trim();
                 // TODO You may want to parse out comments here
                 if (sqlStatement.length() > 0) {
-                    context.db.execSQL(sqlStatement + ";");
+                    db.execSQL(sqlStatement + ";");
                 }
             }
         } catch (IOException e){
