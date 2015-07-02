@@ -1,0 +1,402 @@
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentActivity: FragmentActivity()
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
+android.support.v4.app.FragmentTabHost$SavedState
+android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.media.MediaDescriptionCompat
+android.support.v4.media.MediaDescriptionCompat: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.MediaMetadataCompat
+android.support.v4.media.MediaMetadataCompat: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.RatingCompat
+android.support.v4.media.RatingCompat: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.MediaSessionCompat$QueueItem
+android.support.v4.media.session.MediaSessionCompat$QueueItem: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper
+android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.MediaSessionCompat$Token
+android.support.v4.media.session.MediaSessionCompat$Token: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.ParcelableVolumeInfo
+android.support.v4.media.session.ParcelableVolumeInfo: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.PlaybackStateCompat
+android.support.v4.media.session.PlaybackStateCompat: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.PlaybackStateCompat$CustomAction
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: android.os.Parcelable$Creator CREATOR
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
+android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
+android.support.v4.view.PagerTabStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.PagerTabStrip: void setBackgroundColor(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundResource(int)
+android.support.v4.view.PagerTabStrip: void setDrawFullUnderline(boolean)
+android.support.v4.view.PagerTabStrip: boolean getDrawFullUnderline()
+android.support.v4.view.PagerTabStrip: int getMinHeight()
+android.support.v4.view.PagerTitleStrip: void setSingleLineAllCaps(android.widget.TextView)
+android.support.v4.view.PagerTitleStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTitleStrip: int getTextSpacing()
+android.support.v4.view.PagerTitleStrip: void setNonPrimaryAlpha(float)
+android.support.v4.view.PagerTitleStrip: void setTextColor(int)
+android.support.v4.view.PagerTitleStrip: void setGravity(int)
+android.support.v4.view.PagerTitleStrip: int getMinHeight()
+android.support.v4.view.ViewPager: void setScrollState(int)
+android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
+android.support.v4.view.ViewPager: void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
+android.support.v4.view.ViewPager: int getClientWidth()
+android.support.v4.view.ViewPager: void setCurrentItem(int)
+android.support.v4.view.ViewPager: int getCurrentItem()
+android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+android.support.v4.view.ViewPager: void setChildrenDrawingOrderEnabledCompat(boolean)
+android.support.v4.view.ViewPager: int getOffscreenPageLimit()
+android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
+android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: int getPageMargin()
+android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
+android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.DrawerLayout: void setScrimColor(int)
+android.support.v4.widget.DrawerLayout: void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener)
+android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int)
+android.support.v4.widget.DrawerLayout: void setStatusBarBackground(android.graphics.drawable.Drawable)
+android.support.v4.widget.DrawerLayout: android.graphics.drawable.Drawable getStatusBarBackgroundDrawable()
+android.support.v4.widget.DrawerLayout: void setStatusBarBackground(int)
+android.support.v4.widget.DrawerLayout: void setStatusBarBackgroundColor(int)
+android.support.v4.widget.DrawerLayout$SavedState
+android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.NestedScrollView: void setNestedScrollingEnabled(boolean)
+android.support.v4.widget.NestedScrollView: int getNestedScrollAxes()
+android.support.v4.widget.NestedScrollView: float getTopFadingEdgeStrength()
+android.support.v4.widget.NestedScrollView: float getBottomFadingEdgeStrength()
+android.support.v4.widget.NestedScrollView: int getMaxScrollAmount()
+android.support.v4.widget.NestedScrollView: void setFillViewport(boolean)
+android.support.v4.widget.NestedScrollView: void setSmoothScrollingEnabled(boolean)
+android.support.v4.widget.NestedScrollView: float getVerticalScrollFactorCompat()
+android.support.v4.widget.NestedScrollView: int getScrollRange()
+android.support.v4.widget.NestedScrollView$SavedState
+android.support.v4.widget.NestedScrollView$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SlidingPaneLayout: void setParallaxDistance(int)
+android.support.v4.widget.SlidingPaneLayout: int getParallaxDistance()
+android.support.v4.widget.SlidingPaneLayout: void setSliderFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getSliderFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setCoveredFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getCoveredFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableLeft(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableRight(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResourceLeft(int)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResourceRight(int)
+android.support.v4.widget.SlidingPaneLayout$SavedState
+android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SwipeRefreshLayout: void setColorViewAlpha(int)
+android.support.v4.widget.SwipeRefreshLayout: void setSize(int)
+android.support.v4.widget.SwipeRefreshLayout: void setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener)
+android.support.v4.widget.SwipeRefreshLayout: void setRefreshing(boolean)
+android.support.v4.widget.SwipeRefreshLayout: void setAnimationProgress(float)
+android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColor(int)
+android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColorSchemeResource(int)
+android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColorSchemeColor(int)
+android.support.v4.widget.SwipeRefreshLayout: void setColorScheme(int[])
+android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeResources(int[])
+android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeColors(int[])
+android.support.v4.widget.SwipeRefreshLayout: void setDistanceToTriggerSync(int)
+android.support.v4.widget.SwipeRefreshLayout: int getProgressCircleDiameter()
+com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFile
+com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFile: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFileDataType: com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFileDataType[] values()
+com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFileDataType: com.dsi.ant.plugins.antplus.common.FitFileCommon$FitFileDataType valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$AutoZeroStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationId valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationMessage
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CalibrationMessage: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthSetting: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthSetting[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthSetting: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthSetting valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankLengthStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankParameters
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CrankParameters: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$CustomCalibrationStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$DataSource valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$MeasurementDataType: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$MeasurementDataType[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$MeasurementDataType: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$MeasurementDataType valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorAvailabilityStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusBikePowerPcc$SensorSoftwareMismatchStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$BloodPressureMeasurement
+com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$BloodPressureMeasurement: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$DownloadMeasurementsStatusCode: com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$DownloadMeasurementsStatusCode[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$DownloadMeasurementsStatusCode: com.dsi.ant.plugins.antplus.pcc.AntPlusBloodPressurePcc$DownloadMeasurementsStatusCode valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$EquipmentState: com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$EquipmentState[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$EquipmentState: com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$EquipmentState valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$EquipmentType: com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$EquipmentType[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$EquipmentType: com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$EquipmentType valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$HeartRateDataSource: com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$HeartRateDataSource[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$HeartRateDataSource: com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$HeartRateDataSource valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$Settings$Gender: com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$Settings$Gender[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$Settings$Gender: com.dsi.ant.plugins.antplus.pcc.AntPlusFitnessEquipmentPcc$Settings$Gender valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$DeviceChangingCode: com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$DeviceChangingCode[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$DeviceChangingCode: com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$DeviceChangingCode valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheDeviceData
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheDeviceData: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheRequestStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheRequestStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheRequestStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$GeocacheRequestStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$ProgrammableGeocacheDeviceData
+com.dsi.ant.plugins.antplus.pcc.AntPlusGeocachePcc$ProgrammableGeocacheDeviceData: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState: com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState: com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$DataState valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$RrFlag: com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$RrFlag[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$RrFlag: com.dsi.ant.plugins.antplus.pcc.AntPlusHeartRatePcc$RrFlag valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorHealth: com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorHealth[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorHealth: com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorHealth valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorLocation: com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorLocation[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorLocation: com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorLocation valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorUseState: com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorUseState[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorUseState: com.dsi.ant.plugins.antplus.pcc.AntPlusStrideSdmPcc$SensorUseState valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceInfo
+com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceInfo: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceListUpdateCode: com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceListUpdateCode[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceListUpdateCode: com.dsi.ant.plugins.antplus.pcc.AntPlusWatchDownloaderPcc$DeviceListUpdateCode valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$AdvancedMeasurement
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$AdvancedMeasurement: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$BodyWeightStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$BodyWeightStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$BodyWeightStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$BodyWeightStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender: com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender: com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$Gender valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$UserProfile
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$UserProfile: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$WeightScaleRequestStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$WeightScaleRequestStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$WeightScaleRequestStatus: com.dsi.ant.plugins.antplus.pcc.AntPlusWeightScalePcc$WeightScaleRequestStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioDeviceState: com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioDeviceState[] values()
+com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioDeviceState: com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioDeviceState valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioRepeatState: com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioRepeatState[] values()
+com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioRepeatState: com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioRepeatState valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioShuffleState: com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioShuffleState[] values()
+com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioShuffleState: com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioShuffleState valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioVideoCommandNumber: com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioVideoCommandNumber[] values()
+com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioVideoCommandNumber: com.dsi.ant.plugins.antplus.pcc.controls.defines.AudioVideoCommandNumber valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.controls.defines.CommandStatus: com.dsi.ant.plugins.antplus.pcc.controls.defines.CommandStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.controls.defines.CommandStatus: com.dsi.ant.plugins.antplus.pcc.controls.defines.CommandStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.controls.defines.ControlsMode: com.dsi.ant.plugins.antplus.pcc.controls.defines.ControlsMode[] values()
+com.dsi.ant.plugins.antplus.pcc.controls.defines.ControlsMode: com.dsi.ant.plugins.antplus.pcc.controls.defines.ControlsMode valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.controls.defines.GenericCommandNumber: com.dsi.ant.plugins.antplus.pcc.controls.defines.GenericCommandNumber[] values()
+com.dsi.ant.plugins.antplus.pcc.controls.defines.GenericCommandNumber: com.dsi.ant.plugins.antplus.pcc.controls.defines.GenericCommandNumber valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.controls.defines.VideoDeviceState: com.dsi.ant.plugins.antplus.pcc.controls.defines.VideoDeviceState[] values()
+com.dsi.ant.plugins.antplus.pcc.controls.defines.VideoDeviceState: com.dsi.ant.plugins.antplus.pcc.controls.defines.VideoDeviceState valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.controls.pccbase.AntPlusBaseRemoteControlPcc$ControlDeviceCapabilities
+com.dsi.ant.plugins.antplus.pcc.controls.pccbase.AntPlusBaseRemoteControlPcc$ControlDeviceCapabilities: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pcc.defines.AntFsRequestStatus: com.dsi.ant.plugins.antplus.pcc.defines.AntFsRequestStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.defines.AntFsRequestStatus: com.dsi.ant.plugins.antplus.pcc.defines.AntFsRequestStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.defines.AntFsState: com.dsi.ant.plugins.antplus.pcc.defines.AntFsState[] values()
+com.dsi.ant.plugins.antplus.pcc.defines.AntFsState: com.dsi.ant.plugins.antplus.pcc.defines.AntFsState valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus: com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus: com.dsi.ant.plugins.antplus.pcc.defines.BatteryStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.defines.DeviceState: com.dsi.ant.plugins.antplus.pcc.defines.DeviceState[] values()
+com.dsi.ant.plugins.antplus.pcc.defines.DeviceState: com.dsi.ant.plugins.antplus.pcc.defines.DeviceState valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.defines.DeviceType: com.dsi.ant.plugins.antplus.pcc.defines.DeviceType[] values()
+com.dsi.ant.plugins.antplus.pcc.defines.DeviceType: com.dsi.ant.plugins.antplus.pcc.defines.DeviceType valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.defines.EventFlag: com.dsi.ant.plugins.antplus.pcc.defines.EventFlag[] values()
+com.dsi.ant.plugins.antplus.pcc.defines.EventFlag: com.dsi.ant.plugins.antplus.pcc.defines.EventFlag valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult: com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult[] values()
+com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult: com.dsi.ant.plugins.antplus.pcc.defines.RequestAccessResult valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pcc.defines.RequestStatus: com.dsi.ant.plugins.antplus.pcc.defines.RequestStatus[] values()
+com.dsi.ant.plugins.antplus.pcc.defines.RequestStatus: com.dsi.ant.plugins.antplus.pcc.defines.RequestStatus valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pccbase.AntPlusBikeSpdCadCommonPcc$MultiDeviceSearchSpdCadResult
+com.dsi.ant.plugins.antplus.pccbase.AntPlusBikeSpdCadCommonPcc$MultiDeviceSearchSpdCadResult: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pccbase.AntPlusCommonPcc$CommonDataPage: com.dsi.ant.plugins.antplus.pccbase.AntPlusCommonPcc$CommonDataPage[] values()
+com.dsi.ant.plugins.antplus.pccbase.AntPlusCommonPcc$CommonDataPage: com.dsi.ant.plugins.antplus.pccbase.AntPlusCommonPcc$CommonDataPage valueOf(java.lang.String)
+com.dsi.ant.plugins.antplus.pccbase.AsyncScanController$AsyncScanResultDeviceInfo
+com.dsi.ant.plugins.antplus.pccbase.AsyncScanController$AsyncScanResultDeviceInfo: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$MultiDeviceSearchResult
+com.dsi.ant.plugins.antplus.pccbase.MultiDeviceSearch$MultiDeviceSearchResult: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo
+com.dsi.ant.plugins.internal.pluginsipc.AntPluginDeviceDbProvider$DeviceDbDeviceInfo: android.os.Parcelable$Creator CREATOR
+com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel: com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel[] values()
+com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel: com.dsi.ant.plugins.utility.log.LogAnt$DebugLevel valueOf(java.lang.String)
+com.garmin.fit.Activity: com.garmin.fit.Activity[] values()
+com.garmin.fit.Activity: com.garmin.fit.Activity valueOf(java.lang.String)
+com.garmin.fit.ActivityClass: com.garmin.fit.ActivityClass[] values()
+com.garmin.fit.ActivityClass: com.garmin.fit.ActivityClass valueOf(java.lang.String)
+com.garmin.fit.ActivityLevel: com.garmin.fit.ActivityLevel[] values()
+com.garmin.fit.ActivityLevel: com.garmin.fit.ActivityLevel valueOf(java.lang.String)
+com.garmin.fit.ActivitySubtype: com.garmin.fit.ActivitySubtype[] values()
+com.garmin.fit.ActivitySubtype: com.garmin.fit.ActivitySubtype valueOf(java.lang.String)
+com.garmin.fit.ActivityType: com.garmin.fit.ActivityType[] values()
+com.garmin.fit.ActivityType: com.garmin.fit.ActivityType valueOf(java.lang.String)
+com.garmin.fit.AntNetwork: com.garmin.fit.AntNetwork[] values()
+com.garmin.fit.AntNetwork: com.garmin.fit.AntNetwork valueOf(java.lang.String)
+com.garmin.fit.AutolapTrigger: com.garmin.fit.AutolapTrigger[] values()
+com.garmin.fit.AutolapTrigger: com.garmin.fit.AutolapTrigger valueOf(java.lang.String)
+com.garmin.fit.BodyLocation: com.garmin.fit.BodyLocation[] values()
+com.garmin.fit.BodyLocation: com.garmin.fit.BodyLocation valueOf(java.lang.String)
+com.garmin.fit.Bool: com.garmin.fit.Bool[] values()
+com.garmin.fit.Bool: com.garmin.fit.Bool valueOf(java.lang.String)
+com.garmin.fit.BpStatus: com.garmin.fit.BpStatus[] values()
+com.garmin.fit.BpStatus: com.garmin.fit.BpStatus valueOf(java.lang.String)
+com.garmin.fit.CoursePoint: com.garmin.fit.CoursePoint[] values()
+com.garmin.fit.CoursePoint: com.garmin.fit.CoursePoint valueOf(java.lang.String)
+com.garmin.fit.Decode$RETURN: com.garmin.fit.Decode$RETURN[] values()
+com.garmin.fit.Decode$RETURN: com.garmin.fit.Decode$RETURN valueOf(java.lang.String)
+com.garmin.fit.Decode$STATE: com.garmin.fit.Decode$STATE[] values()
+com.garmin.fit.Decode$STATE: com.garmin.fit.Decode$STATE valueOf(java.lang.String)
+com.garmin.fit.DisplayHeart: com.garmin.fit.DisplayHeart[] values()
+com.garmin.fit.DisplayHeart: com.garmin.fit.DisplayHeart valueOf(java.lang.String)
+com.garmin.fit.DisplayMeasure: com.garmin.fit.DisplayMeasure[] values()
+com.garmin.fit.DisplayMeasure: com.garmin.fit.DisplayMeasure valueOf(java.lang.String)
+com.garmin.fit.DisplayPosition: com.garmin.fit.DisplayPosition[] values()
+com.garmin.fit.DisplayPosition: com.garmin.fit.DisplayPosition valueOf(java.lang.String)
+com.garmin.fit.DisplayPower: com.garmin.fit.DisplayPower[] values()
+com.garmin.fit.DisplayPower: com.garmin.fit.DisplayPower valueOf(java.lang.String)
+com.garmin.fit.Event: com.garmin.fit.Event[] values()
+com.garmin.fit.Event: com.garmin.fit.Event valueOf(java.lang.String)
+com.garmin.fit.EventType: com.garmin.fit.EventType[] values()
+com.garmin.fit.EventType: com.garmin.fit.EventType valueOf(java.lang.String)
+com.garmin.fit.File: com.garmin.fit.File[] values()
+com.garmin.fit.File: com.garmin.fit.File valueOf(java.lang.String)
+com.garmin.fit.FitnessEquipmentState: com.garmin.fit.FitnessEquipmentState[] values()
+com.garmin.fit.FitnessEquipmentState: com.garmin.fit.FitnessEquipmentState valueOf(java.lang.String)
+com.garmin.fit.Gender: com.garmin.fit.Gender[] values()
+com.garmin.fit.Gender: com.garmin.fit.Gender valueOf(java.lang.String)
+com.garmin.fit.Goal: com.garmin.fit.Goal[] values()
+com.garmin.fit.Goal: com.garmin.fit.Goal valueOf(java.lang.String)
+com.garmin.fit.GoalRecurrence: com.garmin.fit.GoalRecurrence[] values()
+com.garmin.fit.GoalRecurrence: com.garmin.fit.GoalRecurrence valueOf(java.lang.String)
+com.garmin.fit.HrType: com.garmin.fit.HrType[] values()
+com.garmin.fit.HrType: com.garmin.fit.HrType valueOf(java.lang.String)
+com.garmin.fit.HrZoneCalc: com.garmin.fit.HrZoneCalc[] values()
+com.garmin.fit.HrZoneCalc: com.garmin.fit.HrZoneCalc valueOf(java.lang.String)
+com.garmin.fit.Intensity: com.garmin.fit.Intensity[] values()
+com.garmin.fit.Intensity: com.garmin.fit.Intensity valueOf(java.lang.String)
+com.garmin.fit.Language: com.garmin.fit.Language[] values()
+com.garmin.fit.Language: com.garmin.fit.Language valueOf(java.lang.String)
+com.garmin.fit.LapTrigger: com.garmin.fit.LapTrigger[] values()
+com.garmin.fit.LapTrigger: com.garmin.fit.LapTrigger valueOf(java.lang.String)
+com.garmin.fit.LengthType: com.garmin.fit.LengthType[] values()
+com.garmin.fit.LengthType: com.garmin.fit.LengthType valueOf(java.lang.String)
+com.garmin.fit.MesgCount: com.garmin.fit.MesgCount[] values()
+com.garmin.fit.MesgCount: com.garmin.fit.MesgCount valueOf(java.lang.String)
+com.garmin.fit.PwrZoneCalc: com.garmin.fit.PwrZoneCalc[] values()
+com.garmin.fit.PwrZoneCalc: com.garmin.fit.PwrZoneCalc valueOf(java.lang.String)
+com.garmin.fit.Schedule: com.garmin.fit.Schedule[] values()
+com.garmin.fit.Schedule: com.garmin.fit.Schedule valueOf(java.lang.String)
+com.garmin.fit.SessionTrigger: com.garmin.fit.SessionTrigger[] values()
+com.garmin.fit.SessionTrigger: com.garmin.fit.SessionTrigger valueOf(java.lang.String)
+com.garmin.fit.SourceType: com.garmin.fit.SourceType[] values()
+com.garmin.fit.SourceType: com.garmin.fit.SourceType valueOf(java.lang.String)
+com.garmin.fit.Sport: com.garmin.fit.Sport[] values()
+com.garmin.fit.Sport: com.garmin.fit.Sport valueOf(java.lang.String)
+com.garmin.fit.StrokeType: com.garmin.fit.StrokeType[] values()
+com.garmin.fit.StrokeType: com.garmin.fit.StrokeType valueOf(java.lang.String)
+com.garmin.fit.SubSport: com.garmin.fit.SubSport[] values()
+com.garmin.fit.SubSport: com.garmin.fit.SubSport valueOf(java.lang.String)
+com.garmin.fit.SwimStroke: com.garmin.fit.SwimStroke[] values()
+com.garmin.fit.SwimStroke: com.garmin.fit.SwimStroke valueOf(java.lang.String)
+com.garmin.fit.TimeZone: com.garmin.fit.TimeZone[] values()
+com.garmin.fit.TimeZone: com.garmin.fit.TimeZone valueOf(java.lang.String)
+com.garmin.fit.TimerTrigger: com.garmin.fit.TimerTrigger[] values()
+com.garmin.fit.TimerTrigger: com.garmin.fit.TimerTrigger valueOf(java.lang.String)
+com.garmin.fit.WktStepDuration: com.garmin.fit.WktStepDuration[] values()
+com.garmin.fit.WktStepDuration: com.garmin.fit.WktStepDuration valueOf(java.lang.String)
+com.garmin.fit.WktStepTarget: com.garmin.fit.WktStepTarget[] values()
+com.garmin.fit.WktStepTarget: com.garmin.fit.WktStepTarget valueOf(java.lang.String)
+com.ridelogger.R$drawable: int ic_launcher
+com.ridelogger.R$id: int LayoutData
+com.ridelogger.R$id: int Settings
+com.ridelogger.R$id: int Start
+com.ridelogger.R$id: int Stop
+com.ridelogger.R$layout: int activity_dashboard
+com.ridelogger.R$layout: int settings
+com.ridelogger.R$menu: int start_activity
+com.ridelogger.R$string: int PREFS_NAME
+com.ridelogger.R$string: int PREF_DETECT_CRASH
+com.ridelogger.R$string: int PREF_EMERGENCY_NUMBER
+com.ridelogger.R$string: int PREF_PAIRED_ANTS
+com.ridelogger.R$string: int PREF_PHONE_HOME
+com.ridelogger.R$string: int PREF_PHONE_HOME_PERIOD
+com.ridelogger.R$string: int PREF_RIDER_NAME
+com.ridelogger.R$string: int PREF_TRACKING_IMPERIAL_UNITS
+com.ridelogger.R$string: int PREF_TRACKING_SENSORS
+com.ridelogger.R$string: int PREF_TRACKING_SIZE
+com.ridelogger.R$string: int PREF_WHEEL_SIZE
+com.ridelogger.R$string: int ant_pair_dialog_button_note
+com.ridelogger.R$string: int ant_pair_dialog_title
+com.ridelogger.R$string: int ant_setup_note
+com.ridelogger.R$string: int ant_setup_title
+com.ridelogger.R$string: int app_name
+com.ridelogger.R$string: int boolean_dialog_no
+com.ridelogger.R$string: int boolean_dialog_yes
+com.ridelogger.R$string: int building_ride
+com.ridelogger.R$string: int click_to_stop
+com.ridelogger.R$string: int crash_confirm
+com.ridelogger.R$string: int crash_detection_dialog_note
+com.ridelogger.R$string: int crash_detection_dialog_title
+com.ridelogger.R$string: int crash_magnitude
+com.ridelogger.R$string: int crash_unknow_location
+com.ridelogger.R$string: int crash_warning
+com.ridelogger.R$string: int edit_settings
+com.ridelogger.R$string: int emergency_contact_dialog_note
+com.ridelogger.R$string: int emergency_contact_dialog_title
+com.ridelogger.R$string: int emergency_contact_number_dialog_note
+com.ridelogger.R$string: int emergency_contact_number_dialog_title
+com.ridelogger.R$string: int found_ants
+com.ridelogger.R$string: int gc_rider_name_dialog_note
+com.ridelogger.R$string: int gc_rider_name_dialog_title
+com.ridelogger.R$string: int imperial_units_note
+com.ridelogger.R$string: int imperial_units_title
+com.ridelogger.R$string: int no_found_ants
+com.ridelogger.R$string: int ride_on
+com.ridelogger.R$string: int ride_start_note
+com.ridelogger.R$string: int ride_start_sms
+com.ridelogger.R$string: int ride_start_title
+com.ridelogger.R$string: int ride_stop_note
+com.ridelogger.R$string: int ride_stop_sms
+com.ridelogger.R$string: int ride_stop_title
+com.ridelogger.R$string: int riding_ok_sms
+com.ridelogger.R$string: int save_setting_button
+com.ridelogger.R$string: int searching_for_ants
+com.ridelogger.R$string: int service_name
+com.ridelogger.R$string: int setting_ant_note
+com.ridelogger.R$string: int setting_ant_title
+com.ridelogger.R$string: int setting_general_note
+com.ridelogger.R$string: int setting_general_title
+com.ridelogger.R$string: int setting_sensors_note
+com.ridelogger.R$string: int setting_sensors_title
+com.ridelogger.R$string: int setting_size_title
+com.ridelogger.R$string: int setting_title
+com.ridelogger.R$string: int setting_wheel_size
+com.ridelogger.R$string: int skip_setting_button
+com.ridelogger.R$string: int sms_period_dialog_note
+com.ridelogger.R$string: int sms_period_dialog_title
+com.ridelogger.R$string: int start
+com.ridelogger.R$string: int starting_ride
+com.ridelogger.R$string: int stop
+com.ridelogger.R$string: int stopping_ride
+com.ridelogger.R$string: int view
+com.ridelogger.R$xml: int ant_settings
+com.ridelogger.R$xml: int general_settings
+com.ridelogger.R$xml: int sensors_settings
+com.ridelogger.RideService
+com.ridelogger.RideService: RideService()
+com.ridelogger.SettingsActivity
+com.ridelogger.SettingsActivity: SettingsActivity()
+com.ridelogger.SettingsActivity$AntFragment
+com.ridelogger.SettingsActivity$GeneralFragment
+com.ridelogger.SettingsActivity$SensorsFragment
+com.ridelogger.StartActivity
+com.ridelogger.StartActivity: StartActivity()

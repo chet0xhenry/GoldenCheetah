@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/vl/www/GoldenCheetah/contrib/RideLogger/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/vl/www/GoldenCheetah/contrib/RideLogger/app/build/intermediates/pre-dexed/debug/classes-e471436464fbc8b8509454336ee6ac77c8d66251.jar" />
+    </item>
+    <item
+        jar="/vl/www/GoldenCheetah/contrib/RideLogger/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/vl/www/GoldenCheetah/contrib/RideLogger/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-3df625cd372ba08d358fe385831d0ef23a5564e4.jar" />
+    </item>
+    <item
+        jar="/vl/www/GoldenCheetah/contrib/RideLogger/app/libs/antpluginlib_3-1-0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="724744e283ad2e17bdb9df6ac8e7820ff2b5861e">
+        <dex dex="/vl/www/GoldenCheetah/contrib/RideLogger/app/build/intermediates/pre-dexed/debug/antpluginlib_3-1-0-5de1b042c14ab1f92adc88620539b9ade585c9f6.jar" />
+    </item>
+    <item
+        jar="/vl/www/GoldenCheetah/contrib/RideLogger/app/libs/fit_12.00.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bdccd87881f0d4c4e66b27f3b489b2429073679a">
+        <dex dex="/vl/www/GoldenCheetah/contrib/RideLogger/app/build/intermediates/pre-dexed/debug/fit_12.00-990d2c0374bf5abae699fe676c42fc6e8b71aa24.jar" />
+    </item>
+    <item
+        jar="/home/henry/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/vl/www/GoldenCheetah/contrib/RideLogger/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-8aa3fb6f400a3026a097186d83b8e4110c9b2002.jar" />
+    </item>
+
+</items>
